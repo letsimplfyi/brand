@@ -62,6 +62,15 @@ import tokens from "@letsimplfyi/brand/tokens.json" with { type: "json" };`} />
       <h2>Theming</h2>
       <p class="prose">Tokens follow the device through <code>prefers-color-scheme</code>. To force a theme set <code>data-theme="light"</code> or <code>"dark"</code> on <code>&lt;html&gt;</code>. Apps that persist a choice should default to following the device on first run.</p>
 
+      <h2>Display settings</h2>
+      <p class="prose">Offer users these, and apply them with data attributes on <code>&lt;html&gt;</code>. Each is just a token override.</p>
+      <Code label="HTML" code={`<html data-text="large" data-contrast="high" data-colour="reduced">`} />
+      <Table head={["Attribute", "Effect"]} rows={[
+        [<code>data-text="large"</code>, "Root size 20px instead of 18px."],
+        [<code>data-contrast="high"</code>, "Muted text and hairlines become full ink."],
+        [<code>data-colour="reduced"</code>, "Crayons become light grey and ink variants become ink. Icons and shapes carry the meaning."],
+      ]} />
+
       <h2>Changing the brand</h2>
       <Code label="Shell" code={`# edit tokens/tokens.json (or css/, components/), then:
 npm run tokens   # regenerate tokens/tokens.css

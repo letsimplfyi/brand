@@ -26,8 +26,10 @@ own git repo under https://github.com/letsimplfyi.
   labels for real products. Demo labels in the showcase stay neutral ("Default",
   "Label"). Documentation prose describing the system is allowed, and the
   founder reviews it. If unsure whether something is brand copy, ask.
-- Do not invent colours, fonts or components. The wordmark, crayon colours,
-  type scale and components are inherited from letsimpl.fyi and chaikadi.fyi.
+- Do not invent colours, fonts or components. The wordmark, the three original
+  crayons, type scale and components are inherited from letsimpl.fyi and
+  chaikadi.fyi. Coral, amber, teal, the ink variants and the reading font are
+  v0.2 additions approved by the founder. Anything further needs approval.
 - The wordmark is existing brand and is implemented as live text and CSS. Do not
   redraw it.
 
@@ -80,7 +82,7 @@ nix develop        # node 24, just
 npm ci
 npm run dev        # regenerates tokens, then vite
 npm run build      # tokens, vite build, publish stable files
-npm run check      # tokens in sync, contrast, manifest, fonts, hosts, CSP
+npm run check      # tokens in sync, contrast, colour-vision simulation, manifest, fonts, hosts, CSP
 ```
 
 Run `npm run build && npm run check` before handing over.

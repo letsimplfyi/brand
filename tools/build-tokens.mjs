@@ -18,6 +18,8 @@ export function build() {
       dark.push(`--${name}: ${t.dark};`);
     } else base.push(`--${name}: ${t.value};`);
   }
+  base.push(`--root-size: ${tokens.font["root-size"]};`);
+  for (const [name, v] of Object.entries(tokens.font.weight)) base.push(`--weight-${name}: ${v};`);
   for (const [name, v] of Object.entries(tokens.font.family)) base.push(`--font-${name}: ${v};`);
   base.push(`--font: var(--font-ui);`);
   for (const [name, t] of Object.entries(tokens.type)) {
@@ -30,6 +32,8 @@ export function build() {
   for (const [name, v] of Object.entries(tokens.motion)) base.push(`--motion-${name}: ${v};`);
   for (const [name, v] of Object.entries(tokens.texture)) base.push(`--${name}: ${v};`);
 
+  const crayons = Object.entries(tokens.color).filter(([n, t]) => !("light" in t) && !n.endsWith("-ink")).map(([n]) => n);
+  const inks = Object.keys(tokens.color).filter((n) => n.endsWith("-ink") && n !== "crayon-ink");
   const block = (sel, lines, ind = "  ") => `${sel} {\n${lines.map((l) => `${ind}${l}`).join("\n")}\n}`;
   return [
     "/* GENERATED from tokens/tokens.json by tools/build-tokens.mjs. Do not edit. */",
@@ -39,6 +43,12 @@ export function build() {
     "}",
     block(":root[data-theme=\"light\"]", ["color-scheme: light;", ...light]),
     block(":root[data-theme=\"dark\"]", ["color-scheme: dark;", ...dark]),
+    block(":root[data-text=\"large\"]", [`--root-size: ${tokens.display["text-large-root-size"]};`]),
+    block(":root[data-contrast=\"high\"]", ["--muted: var(--ink);", "--line: var(--ink);"]),
+    block(":root[data-colour=\"reduced\"]", [
+      ...crayons.map((n) => `--${n}: ${tokens.display["reduced-crayon"]};`),
+      ...inks.map((n) => `--${n}: var(--ink);`),
+    ]),
     "",
   ].join("\n");
 }

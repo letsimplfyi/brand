@@ -1,15 +1,15 @@
 import { useEffect, useState } from "preact/hooks";
-import { Button, Icon, Input, Wordmark } from "../components/index.jsx";
+import { Button, Check, Icon, Input, Sheet, Wordmark } from "../components/index.jsx";
 import { useRoute } from "./router.js";
 import { nav, flat } from "./nav.js";
 import { Overview, Use, TokensPage } from "./pages/guides.jsx";
-import { Colour, Typography, Spacing, Motion, Accessibility } from "./pages/foundations.jsx";
+import { Colour, Vision, Typography, Spacing, Motion, Accessibility } from "./pages/foundations.jsx";
 import { WordmarkPage, Assets } from "./pages/brand.jsx";
 import { ComponentPage } from "./pages/components.jsx";
 
 const pages = {
   overview: Overview, use: Use, tokens: TokensPage,
-  colour: Colour, typography: Typography, spacing: Spacing, motion: Motion, accessibility: Accessibility,
+  colour: Colour, vision: Vision, typography: Typography, spacing: Spacing, motion: Motion, accessibility: Accessibility,
   wordmark: WordmarkPage, assets: Assets,
 };
 
@@ -25,10 +25,25 @@ function useTheme() {
   return [theme, () => set(THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length])];
 }
 
+const DISPLAY_DEFAULT = { text: false, contrast: false, colour: false };
+const ATTRS = { text: ["data-text", "large"], contrast: ["data-contrast", "high"], colour: ["data-colour", "reduced"] };
+
+function useDisplay() {
+  const [d, set] = useState(() => { try { return { ...DISPLAY_DEFAULT, ...JSON.parse(localStorage.getItem("brand-display")) }; } catch { return DISPLAY_DEFAULT; } });
+  useEffect(() => {
+    const el = document.documentElement;
+    for (const [k, [attr, val]] of Object.entries(ATTRS)) { if (d[k]) el.setAttribute(attr, val); else el.removeAttribute(attr); }
+    localStorage.setItem("brand-display", JSON.stringify(d));
+  }, [d]);
+  return [d, (k) => set({ ...d, [k]: !d[k] }), () => set(DISPLAY_DEFAULT)];
+}
+
 export function App() {
   const route = useRoute();
   const [theme, cycle] = useTheme();
   const [open, setOpen] = useState(false);
+  const [display, toggle, reset] = useDisplay();
+  const [dOpen, setDOpen] = useState(false);
   const [q, setQ] = useState("");
   useEffect(() => setOpen(false), [route]);
   useEffect(() => { document.getElementById("main")?.focus({ preventScroll: true }); }, [route]);
@@ -47,6 +62,7 @@ export function App() {
         <Wordmark as="p" href="#/overview" animate={false} />
         <span class="grow" />
         <Button small class="menu-btn" aria-expanded={open} aria-controls="sidenav" onClick={() => setOpen(!open)}><Icon name="menu" small /><span class="lbl">Menu</span></Button>
+        <Button small onClick={() => setDOpen(true)}><Icon name="settings" small /><span class="lbl">Display</span></Button>
         <Button small onClick={cycle} aria-label={`Theme: ${theme}. Change theme`}><Icon name={theme === "dark" ? "moon" : "sun"} small /><span class="lbl">{theme[0].toUpperCase() + theme.slice(1)}</span></Button>
       </header>
       <nav id="sidenav" class="sidenav" data-open={open} aria-label="Sections">
@@ -69,6 +85,13 @@ export function App() {
       <main id="main" class="content skip-target" tabIndex={-1}>
         {Page ? <Page /> : <NotFound />}
       </main>
+      <Sheet open={dOpen} onClose={() => setDOpen(false)} title="Display">
+        <p class="ls-hint">Saved on this device only. Each setting is a token override, so apps can offer the same.</p>
+        <Check checked={display.text} onChange={() => toggle("text")}>Larger text (20px)</Check>
+        <Check checked={display.contrast} onChange={() => toggle("contrast")}>High contrast</Check>
+        <Check checked={display.colour} onChange={() => toggle("colour")}>Reduce colour (greyscale crayons)</Check>
+        <p><Button small onClick={reset}>Reset</Button></p>
+      </Sheet>
       <footer class="foot">
         <p>AGPL-3.0-or-later. Fonts keep their own OFL notices. <a href="https://github.com/letsimplfyi/brand">Source</a></p>
       </footer>

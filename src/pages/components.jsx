@@ -58,7 +58,7 @@ const docs = {
 
 <!-- plain HTML -->
 <button class="ls-btn ls-btn--primary">Forward</button>`,
-    props: [["variant", "default | primary | outbound | danger", "primary is green: the one forward action on a screen. outbound is blue and gets an arrow."], ["small", "boolean", "44px instead of 48px."], ["icon", "icon name", "Optional leading icon."], ["href", "string", "Renders an anchor."]],
+    props: [["variant", "default | primary | outbound | danger", "primary is green: the one forward action on a screen. outbound is blue and gets an arrow. danger is coral with a dashed edge and a triangle icon."], ["small", "boolean", "44px instead of 48px."], ["icon", "icon name", "Optional leading icon."], ["href", "string", "Renders an anchor."]],
     use: { yes: ["One primary per screen at most.", "Make the safe choice solid and the destructive one dashed with an alert icon."], no: ["Use green for decoration.", "Make a destructive action distinct by colour only."] },
   },
   link: {
@@ -74,11 +74,11 @@ const docs = {
   tag: {
     title: "Tag",
     lead: "Outlined chips. Project tags are taken verbatim from GitHub topics.",
-    demo: () => (<><Tags items={["offline-first", "preact", "pwa"]} /><Tag variant="green">Host</Tag><Tag>Orderer</Tag><Tag variant="sample">Sample</Tag></>),
+    demo: () => (<><Tags items={["offline-first", "preact", "pwa"]} /><Tag variant="green">Host</Tag><Tag variant="coral">Removed</Tag><Tag variant="amber">Pending</Tag><Tag variant="teal">Note</Tag><Tag>Orderer</Tag><Tag variant="sample">Sample</Tag></>),
     code: `<Tags items={["offline-first", "preact"]} />
 <Tag variant="green">Host</Tag>
 <Tag variant="sample">Sample</Tag>`,
-    props: [["variant", "green | role | sample", "green is for roles and online state. sample is dashed."], ["items", "string[]", "On Tags."]],
+    props: [["variant", "green | coral | amber | teal | role | sample", "Crayon tags always carry a word. sample is dashed."], ["items", "string[]", "On Tags."]],
   },
   card: {
     title: "Card",
@@ -135,15 +135,17 @@ const docs = {
     wide: true,
     demo: () => (
       <>
-        <Callout kind="error">Error: 8px left bar.</Callout>
+        <Callout kind="error">Error: cross icon, 8px left bar.</Callout>
+        <Callout kind="success">Success: check icon.</Callout>
         <Callout kind="warning">Warning: double border.</Callout>
         <Callout kind="info">Note: hairline border.</Callout>
       </>
     ),
     code: `<Callout kind="error">…</Callout>
+<Callout kind="success">…</Callout>
 <Callout kind="warning">…</Callout>
 <Callout kind="info">…</Callout>`,
-    props: [["kind", "error | warning | info", "error uses role=alert."]],
+    props: [["kind", "error | success | warning | info", "error uses role=alert. Icon colour comes from the ink variants."]],
   },
   chip: {
     title: "Chip",

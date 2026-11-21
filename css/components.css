@@ -40,8 +40,8 @@
 .ls-btn--primary { background-color: var(--green); }
 .ls-btn--outbound { background-color: var(--blue); }
 .ls-btn--primary:hover, .ls-btn--outbound:hover { color: var(--crayon-ink); text-decoration: underline; text-underline-offset: 4px; }
-.ls-btn--danger { border-style: dashed; }
-.ls-btn--small { min-height: var(--touch-min); font-size: .875rem; }
+
+.ls-btn--small { min-height: var(--touch-min); font-size: var(--text-secondary); }
 .ls-btn[disabled], .ls-btn[aria-disabled="true"] { color: var(--muted); border: 2px dashed var(--line); background: var(--page); background-image: none; cursor: not-allowed; }
 .ls-btn[disabled]:hover { color: var(--muted); background: var(--page); }
 .ls-btn--outbound::after { content: "\2197"; }
@@ -49,7 +49,7 @@
 /* ---------- Link ---------- */
 a.ls-out {
   display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--touch-min); padding: var(--space-2) var(--space-3);
-  color: var(--crayon-ink); text-decoration: none; font-size: .875rem; overflow-wrap: anywhere;
+  color: var(--crayon-ink); text-decoration: none; font-size: var(--text-secondary); font-weight: 700; overflow-wrap: anywhere;
   background-color: var(--blue); background-image: var(--crayon-hatch); border: 2px solid var(--crayon-ink); border-radius: var(--radius-crayon);
 }
 a.ls-out::after { content: "\2197"; font-weight: 700; }
@@ -57,7 +57,7 @@ a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 /* ---------- Tag ---------- */
 .ls-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-2) 0 0; padding: 0; list-style: none; }
-.ls-tag { display: inline-block; padding: 2px var(--space-2); font-size: .875rem; border: 1px solid var(--ink); }
+.ls-tag { display: inline-block; padding: 2px var(--space-2); font-size: var(--text-secondary); font-weight: var(--weight-medium); border: 1px solid var(--ink); }
 .ls-tag--role { border-color: var(--crayon-ink); }
 .ls-tag--green { color: var(--crayon-ink); background-color: var(--green); background-image: var(--crayon-hatch); border-radius: var(--radius-crayon); font-weight: 700; }
 .ls-tag--sample { border-style: dashed; font-weight: 700; }
@@ -78,7 +78,7 @@ a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
 /* ---------- Fields ---------- */
 .ls-field { display: flex; flex-direction: column; gap: var(--space-1); margin: 0 0 var(--space-4); }
 .ls-field > label, .ls-field > legend { font-weight: 700; }
-.ls-hint { color: var(--muted); font-size: .875rem; }
+.ls-hint { color: var(--muted); font-size: var(--text-secondary); font-weight: var(--weight-medium); }
 .ls-input, .ls-select, .ls-textarea {
   width: 100%; min-height: var(--touch-preferred); padding: var(--space-2) var(--space-3);
   font: 400 1rem/1.5 var(--font-ui); color: var(--ink); background: var(--page); border: var(--rule); border-radius: 0;
@@ -98,7 +98,7 @@ a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
 .ls-vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* ---------- Chip (freshness / status) ---------- */
-.ls-chip { display: inline-flex; align-items: center; gap: var(--space-1); padding: 2px var(--space-2); font-size: .875rem; border: 1px solid var(--ink); }
+.ls-chip { display: inline-flex; align-items: center; gap: var(--space-1); padding: 2px var(--space-2); font-size: var(--text-secondary); font-weight: var(--weight-medium); border: 1px solid var(--ink); }
 .ls-chip--fresh { font-weight: 700; }
 .ls-chip--stale { border: 3px double var(--ink); }
 .ls-chip--unverified { border-style: dashed; }
@@ -138,7 +138,7 @@ a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
 .ls-bottombar > li { flex: 1; }
 .ls-bottombar a, .ls-bottombar button {
   position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; width: 100%; min-height: 64px; padding: var(--space-2) 0;
-  font: 400 .75rem/1.4 var(--font-ui); color: var(--ink); text-decoration: none; background: none; border: 0; cursor: pointer;
+  font: 500 var(--text-small)/1.4 var(--font-ui); color: var(--ink); text-decoration: none; background: none; border: 0; cursor: pointer;
 }
 .ls-bottombar [aria-current="page"] { font-weight: 700; }
 .ls-bottombar [aria-current="page"]::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--ink); }
@@ -151,3 +151,35 @@ a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
   .ls-mark mark, .ls-crayon { background: Mark; color: MarkText; }
   .ls-print { border-color: CanvasText; }
 }
+
+/* ---------- v0.2: status crayons ---------- */
+.ls-crayon--coral { background-color: var(--coral); }
+.ls-crayon--amber { background-color: var(--amber); }
+.ls-crayon--teal { background-color: var(--teal); }
+.ls-tag--coral, .ls-tag--amber, .ls-tag--teal { color: var(--crayon-ink); background-image: var(--crayon-hatch); border: 1px solid var(--crayon-ink); border-radius: var(--radius-crayon); font-weight: 700; }
+.ls-tag--coral { background-color: var(--coral); }
+.ls-tag--amber { background-color: var(--amber); }
+.ls-tag--teal { background-color: var(--teal); }
+
+/* Destructive: coral fill, dashed edge, alert icon (added by the component). */
+.ls-btn--danger { color: var(--crayon-ink); background-color: var(--coral); background-image: var(--crayon-hatch); border: 2px dashed var(--crayon-ink); border-radius: var(--radius-crayon); }
+.ls-btn--danger:hover { color: var(--crayon-ink); text-decoration: underline; text-underline-offset: 4px; }
+
+/* Ink variants: for text and icons on the bare page. Always paired with an icon or word. */
+.ls-ink--danger { color: var(--danger-ink); }
+.ls-ink--success { color: var(--success-ink); }
+.ls-ink--warning { color: var(--warning-ink); }
+.ls-ink--info { color: var(--info-ink); }
+.ls-callout--error > .ls-icon { color: var(--danger-ink); }
+.ls-callout--warning > .ls-icon { color: var(--warning-ink); }
+.ls-callout--info > .ls-icon { color: var(--info-ink); }
+.ls-callout--success > .ls-icon { color: var(--success-ink); }
+.ls-callout--error, .ls-callout--warning, .ls-callout--info, .ls-callout--success { font-weight: var(--weight-medium); }
+
+.ls-input:disabled, .ls-select:disabled { cursor: not-allowed; }
+
+/* Crayon buttons keep their fill on hover (the generic .ls-btn:hover inverts). */
+.ls-btn--primary:hover, .ls-btn--outbound:hover, .ls-btn--danger:hover { background-image: var(--crayon-hatch); }
+.ls-btn--primary:hover { background-color: var(--green); }
+.ls-btn--outbound:hover { background-color: var(--blue); }
+.ls-btn--danger:hover { background-color: var(--coral); }

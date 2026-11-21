@@ -1,6 +1,6 @@
 {
   "name": "@letsimplfyi/brand",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Source of truth for letsimpl.fyi design: tokens, CSS, Preact components, assets and the brand.letsimpl.fyi showcase.",
   "license": "AGPL-3.0-or-later",

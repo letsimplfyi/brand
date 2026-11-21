@@ -45,7 +45,7 @@ See [DESIGN.md](DESIGN.md) for the decisions and AGENTS.md for deploy setup.
 
 | Asset | State |
 | --- | --- |
-| Tokens, CSS, components, fonts | Done, v0.1 |
+| Tokens, CSS, components, fonts | Done, v0.2 |
 | Logo, mark, favicon, app icons | Placeholder |
 | Loading screen, splash, social image | Placeholder |
 | Illustration and photography direction | Placeholder |

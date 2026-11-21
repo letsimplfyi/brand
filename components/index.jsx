@@ -27,7 +27,7 @@ export function Wordmark({ as: Tag = "span", href, animate = true, fit = false, 
   );
 }
 
-/** variant: default | primary (the one forward action) | outbound | danger */
+/** variant: default | primary (the one forward action) | outbound | danger (coral, dashed, alert icon) */
 export function Button({ variant = "default", small, icon, children, class: cls, ...rest }) {
   const Tag = rest.href ? "a" : "button";
   return (
@@ -79,7 +79,7 @@ export function Field({ id, label, hint, error, children }) {
       <label for={id}>{label}</label>
       {hint && <span class="ls-hint" id={`${id}-hint`}>{hint}</span>}
       {children}
-      {error && <span class="ls-callout ls-callout--error" id={`${id}-err`} role="alert"><Icon name="alert" /><span><span class="ls-vh">Error: </span>{error}</span></span>}
+      {error && <span class="ls-callout ls-callout--error" id={`${id}-err`} role="alert"><Icon name="error" /><span><span class="ls-vh">Error: </span>{error}</span></span>}
     </div>
   );
 }
@@ -88,9 +88,9 @@ export const Select = ({ class: c, children, ...p }) => <select class={cx("ls-se
 export const Textarea = ({ class: c, ...p }) => <textarea class={cx("ls-textarea", c)} {...p} />;
 export const Check = ({ children, ...p }) => <label class="ls-check"><input type="checkbox" {...p} />{children}</label>;
 
-const calloutIcon = { error: "alert", warning: "alert", info: "info" };
-const calloutWord = { error: "Error", warning: "Warning", info: "Note" };
-/** kind: error | warning | info. Icon + hidden prefix + shape, never colour alone. */
+const calloutIcon = { error: "error", warning: "alert", info: "info", success: "success" };
+const calloutWord = { error: "Error", warning: "Warning", info: "Note", success: "Success" };
+/** kind: error | warning | info | success. Icon + hidden prefix + shape, never colour alone. */
 export function Callout({ kind = "info", children }) {
   return (
     <div class={cx("ls-callout", `ls-callout--${kind}`)} role={kind === "error" ? "alert" : "note"}>

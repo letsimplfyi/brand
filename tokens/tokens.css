@@ -4,7 +4,15 @@
   --yellow: #FFE066;
   --blue: #9FCBFF;
   --green: #A7E3A0;
+  --coral: #F76C5A;
+  --amber: #FFB35C;
+  --teal: #7ED6C9;
+  --root-size: 112.5%;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
   --font-ui: "Atkinson Hyperlegible Mono", ui-monospace, "Courier New", monospace;
+  --font-read: "Atkinson Hyperlegible Next", system-ui, sans-serif;
   --font-receipt: "Courier Prime", "Courier New", monospace;
   --font-malayalam: "Noto Serif Malayalam", serif;
   --font: var(--font-ui);
@@ -18,9 +26,9 @@
   --leading-sub: 1.5556;
   --text-body: 1rem;
   --leading-body: 1.5556;
-  --text-secondary: 0.875rem;
+  --text-secondary: 0.8889rem;
   --leading-secondary: 1.5;
-  --text-small: 0.75rem;
+  --text-small: 0.7778rem;
   --leading-small: 1.4286;
   --text-total: 1.75rem;
   --leading-total: 1.125;
@@ -50,10 +58,14 @@
   --page: #FFFFFF;
   --ink: #000000;
   --muted: #4D4D4D;
-  --line: #8C8C8C;
+  --line: #767676;
   --tape: #D2D2D2;
   --receipt: #FBF6E9;
   --crayon-ink: #111111;
+  --danger-ink: #B3261E;
+  --success-ink: #1B6E3C;
+  --warning-ink: #8A5A00;
+  --info-ink: #0B5CAD;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -64,6 +76,10 @@
     --tape: #5A5A5A;
     --receipt: #EDE7D6;
     --crayon-ink: #111111;
+    --danger-ink: #FF8F7A;
+    --success-ink: #7FDB9A;
+    --warning-ink: #FFC24D;
+    --info-ink: #8CC4FF;
   }
 }
 :root[data-theme="light"] {
@@ -71,10 +87,14 @@
   --page: #FFFFFF;
   --ink: #000000;
   --muted: #4D4D4D;
-  --line: #8C8C8C;
+  --line: #767676;
   --tape: #D2D2D2;
   --receipt: #FBF6E9;
   --crayon-ink: #111111;
+  --danger-ink: #B3261E;
+  --success-ink: #1B6E3C;
+  --warning-ink: #8A5A00;
+  --info-ink: #0B5CAD;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
@@ -85,4 +105,27 @@
   --tape: #5A5A5A;
   --receipt: #EDE7D6;
   --crayon-ink: #111111;
+  --danger-ink: #FF8F7A;
+  --success-ink: #7FDB9A;
+  --warning-ink: #FFC24D;
+  --info-ink: #8CC4FF;
+}
+:root[data-text="large"] {
+  --root-size: 125%;
+}
+:root[data-contrast="high"] {
+  --muted: var(--ink);
+  --line: var(--ink);
+}
+:root[data-colour="reduced"] {
+  --yellow: #E6E6E6;
+  --blue: #E6E6E6;
+  --green: #E6E6E6;
+  --coral: #E6E6E6;
+  --amber: #E6E6E6;
+  --teal: #E6E6E6;
+  --danger-ink: var(--ink);
+  --success-ink: var(--ink);
+  --warning-ink: var(--ink);
+  --info-ink: var(--ink);
 }

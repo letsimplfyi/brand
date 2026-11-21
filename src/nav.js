@@ -5,6 +5,7 @@ export const nav = [
   ] },
   { group: "Foundations", items: [
     { id: "colour", title: "Colour" },
+    { id: "vision", title: "Colour vision" },
     { id: "typography", title: "Typography" },
     { id: "spacing", title: "Spacing and layout" },
     { id: "motion", title: "Motion" },
