@@ -60,7 +60,8 @@ Each font ships with its licence beside it in `fonts/`.
 
 ## Licence of this repo
 
-AGPL-3.0-or-later, see `LICENSE`. Third-party material keeps its own licence.
+Code is AGPL-3.0-or-later; design and documentation are CC BY-SA 4.0. See
+`LICENSING.md`. Third-party material keeps its own licence.
 
 ## Adding a credit
 

@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "private": true,
   "description": "Source of truth for letsimpl.fyi design: tokens, CSS, Preact components, assets and the brand.letsimpl.fyi showcase.",
-  "license": "AGPL-3.0-or-later",
+  "license": "AGPL-3.0-or-later AND CC-BY-SA-4.0",
   "type": "module",
   "repository": "github:letsimplfyi/brand",
   "exports": {

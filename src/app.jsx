@@ -93,7 +93,7 @@ export function App() {
         <p><Button small onClick={reset}>Reset</Button></p>
       </Sheet>
       <footer class="foot">
-        <p>AGPL-3.0-or-later. Fonts keep their own OFL notices. <a href="#/credits">Credits</a> · <a href="https://github.com/letsimplfyi/brand">Source</a></p>
+        <p>Code AGPL-3.0-or-later. Design and docs CC BY-SA 4.0. Fonts keep their own OFL notices. <a href="#/credits">Credits</a> · <a href="https://github.com/letsimplfyi/brand">Source</a></p>
       </footer>
     </div>
   );

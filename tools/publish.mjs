@@ -4,6 +4,7 @@ import { cpSync, existsSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
+for (const f of ["LICENSE", "LICENSE-CC-BY-SA-4.0", "LICENSING.md"]) cpSync(`${root}${f}`, `${root}dist/${f}`);
 for (const dir of ["tokens", "css", "fonts", "assets"]) {
   if (existsSync(`${root}${dir}`)) cpSync(`${root}${dir}`, `${root}dist/${dir}`, { recursive: true });
 }

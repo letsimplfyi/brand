@@ -54,7 +54,8 @@ own git repo under https://github.com/letsimplfyi.
 - **Accessibility floor:** text 4.5:1, control edges 3:1, 44px targets, 3px
   focus ring, works at 200% text and 320px width, honours
   `prefers-reduced-motion` and `prefers-color-scheme`.
-- **Open source.** AGPL-3.0-or-later. Fonts keep their OFL notices.
+- **Open source.** Code AGPL-3.0-or-later; design and docs CC BY-SA 4.0 (see
+  `LICENSING.md`). Fonts keep their OFL notices.
 - Keep it small. Few dependencies (`preact`, `vite`, `@preact/preset-vite`).
   Ask before adding one.
 

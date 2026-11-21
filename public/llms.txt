@@ -4,6 +4,10 @@
 
 Everything is plain files at stable URLs with open CORS. Read the rules below before generating any UI or brand material.
 
+## Licence
+
+Code: AGPL-3.0-or-later. Design values, docs and assets: CC BY-SA 4.0 (credit, indicate changes, share alike). Fonts: SIL OFL 1.1. Details: https://github.com/letsimplfyi/brand/blob/main/LICENSING.md
+
 ## Rules for agents
 
 - Never create brand material: no logos, logo marks, favicons, app icons, loading screens, splash screens, social images or illustrations. Missing assets are listed in /assets/manifest.json with status "missing" and must stay placeholders.

@@ -130,7 +130,7 @@ export function Credits() {
         [<Ext href="https://vite.dev">Vite</Ext>, "Evan You and contributors", "MIT"],
         ["@preact/preset-vite", "The Preact team", "MIT"],
       ]} />
-      <p class="ls-hint">This repo is AGPL-3.0-or-later. Third-party material keeps its own licence.</p>
+      <p class="ls-hint">Code is AGPL-3.0-or-later; design and documentation are CC BY-SA 4.0 (see LICENSING.md). Third-party material keeps its own licence.</p>
     </Page>
   );
 }

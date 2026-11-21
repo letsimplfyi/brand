@@ -57,5 +57,10 @@ the W3C, Machado et al., the Braille Institute, Quote-Unquote Apps, the Noto Pro
 
 ## Licence
 
-AGPL-3.0-or-later. Fonts in `fonts/` are SIL OFL 1.1; see the notices beside
-them.
+Two licences, split by material. See [LICENSING.md](LICENSING.md).
+
+- **Code** (CSS, components, tools, site): AGPL-3.0-or-later, [LICENSE](LICENSE).
+- **Design and documentation** (tokens, assets, docs): CC BY-SA 4.0, [LICENSE-CC-BY-SA-4.0](LICENSE-CC-BY-SA-4.0).
+- **Fonts**: SIL OFL 1.1, notices in `fonts/`.
+
+Copyright © 2026 Vysakh Premkumar and the letsimpl.fyi contributors.
