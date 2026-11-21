@@ -26,12 +26,12 @@ own git repo under https://github.com/letsimplfyi.
   labels for real products. Demo labels in the showcase stay neutral ("Default",
   "Label"). Documentation prose describing the system is allowed, and the
   founder reviews it. If unsure whether something is brand copy, ask.
-- Do not invent colours, fonts or components. The wordmark, the three original
-  crayons, type scale and components are inherited from letsimpl.fyi and
-  chaikadi.fyi. Coral, amber, teal, the ink variants and the reading font are
-  v0.2 additions approved by the founder. Anything further needs approval.
-- The wordmark is existing brand and is implemented as live text and CSS. Do not
-  redraw it.
+- Do not invent colours, fonts or components. The brand is black and white with
+  no brand colour, by founder decision. The only colours are the four status
+  fills and their ink variants (from Paul Tol's schemes). Do not add a fifth,
+  and never use colour for decoration. The reading font is an approved addition.
+- The wordmark is existing brand and is implemented as live text and CSS (the
+  slip is an inverted block, no colour). Do not redraw it.
 
 ## Source of truth, in order
 

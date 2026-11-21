@@ -16,7 +16,7 @@ export function WordmarkPage() {
 
       <h2>Rules</h2>
       <ul class="prose">
-        <li>The <code>.</code> and the <code>i</code> sit on yellow crayon and swap places. At rest it reads <code>letsimpl.fyi</code>; mid-stumble it reads <code>letsimplify.</code>. The swap is 3ch because the font is monospace.</li>
+        <li>The <code>.</code> and the <code>i</code> sit on inverted blocks (page colour on ink) and swap places. At rest it reads <code>letsimpl.fyi</code>; mid-stumble it reads <code>letsimplify.</code>. The swap is 3ch because the font is monospace.</li>
         <li>On a hero it fills the screen width. Elsewhere it is sized by font size; the <code>--fit</code> modifier gives a compact version.</li>
         <li>It is real text. The link carries <code>aria-label="letsimpl.fyi"</code> and the glyphs are <code>aria-hidden</code>, so the animation never reaches a screen reader.</li>
         <li>No arrow (too close to Amazon's a-to-z smile).</li>
@@ -42,7 +42,7 @@ export function WordmarkPage() {
 import { Wordmark } from "@letsimplfyi/brand/components";
 <Wordmark as="h1" href="/" />`} />
       <Do
-        yes={["Use the component or the exact markup above.", "Keep a clear space of at least one mark height around it.", "Keep text on yellow at #111111."]}
+        yes={["Use the component or the exact markup above.", "Keep a clear space of at least one mark height around it.", "Keep the blocks plain ink and page. No brand colour."]}
         no={["Redraw, outline or rasterise it for in-app use.", "Add an arrow, shadow or gradient.", "Animate it on every page load of a multi-page app."]}
       />
       <p class="ls-hint">The logo, mark and favicon are separate assets and do not exist yet. See Assets.</p>

@@ -39,7 +39,7 @@ function BarDemo() {
 const docs = {
   button: {
     title: "Button",
-    lead: "Outlined by default. Crayon fills are rare and meaningful.",
+    lead: "Outlined by default. The one primary action is solid ink.",
     demo: () => (
       <>
         <Button>Default</Button>
@@ -58,27 +58,27 @@ const docs = {
 
 <!-- plain HTML -->
 <button class="ls-btn ls-btn--primary">Forward</button>`,
-    props: [["variant", "default | primary | outbound | danger", "primary is green: the one forward action on a screen. outbound is blue and gets an arrow. danger is coral with a dashed edge and a triangle icon."], ["small", "boolean", "44px instead of 48px."], ["icon", "icon name", "Optional leading icon."], ["href", "string", "Renders an anchor."]],
+    props: [["variant", "default | primary | outbound | danger", "primary is solid ink (inverts in dark mode): the one forward action on a screen. outbound is outlined with a trailing arrow. danger is the danger fill with a dashed edge and a triangle icon."], ["small", "boolean", "44px instead of 48px."], ["icon", "icon name", "Optional leading icon."], ["href", "string", "Renders an anchor."]],
     use: { yes: ["One primary per screen at most.", "Make the safe choice solid and the destructive one dashed with an alert icon."], no: ["Use green for decoration.", "Make a destructive action distinct by colour only."] },
   },
   link: {
     title: "Outbound link",
-    lead: "Blue crayon plus a trailing arrow marks anything that leaves the site.",
+    lead: "An underlined link with a trailing arrow marks anything that leaves the site.",
     demo: () => (<><OutLink href="https://letsimpl.fyi">letsimpl.fyi</OutLink><a href="#/overview">Plain link, underlined</a></>),
     code: `<OutLink href="https://letsimpl.fyi">letsimpl.fyi</OutLink>
 
 <a class="ls-out" href="https://letsimpl.fyi" rel="noopener">letsimpl.fyi</a>`,
     props: [["href", "string", "Required."]],
-    use: { yes: ["Use plain underlined links inside the site."], no: ["Use the blue crayon for internal links."] },
+    use: { yes: ["Use plain underlined links inside the site."], no: ["Put an arrow on internal links."] },
   },
   tag: {
     title: "Tag",
     lead: "Outlined chips. Project tags are taken verbatim from GitHub topics.",
-    demo: () => (<><Tags items={["offline-first", "preact", "pwa"]} /><Tag variant="green">Host</Tag><Tag variant="coral">Removed</Tag><Tag variant="amber">Pending</Tag><Tag variant="teal">Note</Tag><Tag>Orderer</Tag><Tag variant="sample">Sample</Tag></>),
+    demo: () => (<><Tags items={["offline-first", "preact", "pwa"]} /><Tag variant="success">Done</Tag><Tag variant="danger">Failed</Tag><Tag variant="warning">Pending</Tag><Tag variant="info">Note</Tag><Tag>Orderer</Tag><Tag variant="sample">Sample</Tag></>),
     code: `<Tags items={["offline-first", "preact"]} />
-<Tag variant="green">Host</Tag>
+<Tag variant="success">Done</Tag>
 <Tag variant="sample">Sample</Tag>`,
-    props: [["variant", "green | coral | amber | teal | role | sample", "Crayon tags always carry a word. sample is dashed."], ["items", "string[]", "On Tags."]],
+    props: [["variant", "success | danger | warning | info | sample", "Status tags always carry a word. sample is dashed."], ["items", "string[]", "On Tags."]],
   },
   card: {
     title: "Card",

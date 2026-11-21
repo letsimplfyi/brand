@@ -32,7 +32,7 @@ export function build() {
   for (const [name, v] of Object.entries(tokens.motion)) base.push(`--motion-${name}: ${v};`);
   for (const [name, v] of Object.entries(tokens.texture)) base.push(`--${name}: ${v};`);
 
-  const crayons = Object.entries(tokens.color).filter(([n, t]) => !("light" in t) && !n.endsWith("-ink")).map(([n]) => n);
+  const fills = Object.entries(tokens.color).filter(([n, t]) => !("light" in t) && !n.endsWith("-ink")).map(([n]) => n);
   const inks = Object.keys(tokens.color).filter((n) => n.endsWith("-ink") && n !== "crayon-ink");
   const block = (sel, lines, ind = "  ") => `${sel} {\n${lines.map((l) => `${ind}${l}`).join("\n")}\n}`;
   return [
@@ -46,7 +46,7 @@ export function build() {
     block(":root[data-text=\"large\"]", [`--root-size: ${tokens.display["text-large-root-size"]};`]),
     block(":root[data-contrast=\"high\"]", ["--muted: var(--ink);", "--line: var(--ink);"]),
     block(":root[data-colour=\"reduced\"]", [
-      ...crayons.map((n) => `--${n}: ${tokens.display["reduced-crayon"]};`),
+      ...fills.map((n) => `--${n}: ${tokens.display["reduced-fill"]};`),
       ...inks.map((n) => `--${n}: var(--ink);`),
     ]),
     "",

@@ -18,20 +18,18 @@ function Swatch({ name, t }) {
           <div><div class="mode-chip" style={{ background: t.dark }} /><b>Dark</b><code>{t.dark}</code></div>
         </div>
       ) : (
-        <div class="swatch__chip ls-crayon" style={{ backgroundColor: t.value, backgroundImage: "var(--crayon-hatch)" }}>{name}</div>
+        <div class="swatch__chip ls-fill" style={{ backgroundColor: t.value }}>{name}</div>
       )}
       <div class="swatch__body"><code>--{name}</code>{!modes && <code>{t.value}</code>}<span>{t.use}</span></div>
     </li>
   );
 }
 
-const crayonRoles = [
-  ["yellow", "Brand only: the slip in the wordmark; the room code in apps. Never a status.", "The dot and the i"],
-  ["green", "The one forward action; success; online and role tags.", "Check icon, bold label"],
-  ["blue", "Outbound: links and actions that leave the page.", "Trailing arrow"],
-  ["coral", "Destructive actions and errors.", "Dashed edge, alert or cross icon"],
-  ["amber", "Warning and attention.", "Triangle icon, double border"],
-  ["teal", "Information and neutral highlight.", "Info icon"],
+const fillRoles = [
+  ["danger", "Destructive actions and errors.", "Cross icon, 8px left bar; dashed edge on buttons"],
+  ["warning", "Warning and attention.", "Triangle icon, double border"],
+  ["success", "Success and confirmed.", "Check icon"],
+  ["info", "Information.", "i icon, hairline border"],
 ];
 const inkKeys = ["danger-ink", "success-ink", "warning-ink", "info-ink"];
 
@@ -44,30 +42,30 @@ export function Colour() {
     pairs.push([`line on page (${m}), control edge`, c.line[m], c.page[m], 4.5]);
     for (const k of inkKeys) pairs.push([`${k} on page (${m})`, c[k][m], c.page[m], 4.5]);
   }
-  for (const [k] of crayonRoles) pairs.push([`crayon-ink on ${k}`, c["crayon-ink"].light, c[k].value, 4.5]);
+  for (const [k] of fillRoles) pairs.push([`crayon-ink on ${k}`, c["crayon-ink"].light, c[k].value, 4.5]);
   pairs.push(["crayon-ink on receipt (light)", "#111111", c.receipt.light, 4.5]);
   pairs.push(["crayon-ink on receipt (dark)", "#111111", c.receipt.dark, 4.5]);
   return (
-    <Page title="Colour" lead="Black and white. Crayon colour only where it means something, and never alone.">
-      <h2>Page, ink and neutrals</h2>
+    <Page title="Colour" lead="Black and white. Nothing has a brand colour. Colour exists only to say what a state is, and never alone.">
+      <h2>Black and white</h2>
+      <p class="prose">The identity is plain black and white: function over form, utility over aesthetics. The primary action is a solid ink button. Links are underlined ink. The wordmark is an inverted block. Controls and key rules use a 2px ink border. Corners are square. No shadows, no gradients, no translucency except a 50% black scrim behind sheets.</p>
       <ul class="swatches">
         {["page", "ink", "muted", "line", "tape", "receipt", "crayon-ink"].map((k) => <Swatch key={k} name={k} t={c[k]} />)}
       </ul>
-      <p class="prose">Controls and key rules use a 2px ink border. Square corners, except crayon fills, which get a slight hand-cut radius (<code>2px 3px 2px 4px</code>). No shadows, no gradients other than the crayon hatch, no translucency except a 50% black scrim behind sheets.</p>
 
-      <h2>Crayon = meaning</h2>
-      <p class="prose">Six crayons. Soft, hand-coloured wax fills, text on them always <code>#111111</code>. The pastels differ mostly in hue, which is what red-green colour blindness erases, so each one has a twin that is not colour.</p>
+      <h2>Status colours</h2>
+      <p class="prose">Four flat fills, one per state, with <code>#111111</code> text on them. They come from Paul Tol's "light" scheme, which was designed for dark text on a coloured fill and checked under red-blind and green-blind vision. Each has a twin that is not colour.</p>
       <ul class="swatches">
-        {crayonRoles.map(([k]) => <Swatch key={k} name={k} t={c[k]} />)}
+        {fillRoles.map(([k]) => <Swatch key={k} name={k} t={c[k]} />)}
       </ul>
-      <Table head={["Crayon", "Only for", "Non-colour twin"]} rows={crayonRoles.map(([k, use, twin]) => [k[0].toUpperCase() + k.slice(1), use, twin])} />
+      <Table head={["State", "Only for", "Non-colour twin"]} rows={fillRoles.map(([k, use, twin]) => [k[0].toUpperCase() + k.slice(1), use, twin])} />
       <Do
-        yes={["Pair every crayon with a word, icon or shape.", "Keep #111111 text on every crayon fill.", "Keep at least L* 15 between crayons that sit side by side."]}
-        no={["Reuse a crayon as decoration, or add a seventh.", "Tell two crayons apart by hue alone.", "Use a crayon as text colour on the bare page."]}
+        yes={["Use colour only for the four states above.", "Pair every status colour with a word, icon or shape.", "Keep #111111 text on every fill."]}
+        no={["Use colour for decoration, branding or emphasis.", "Tell two states apart by colour alone.", "Use a fill colour as text on the bare page."]}
       />
 
       <h2>Ink variants</h2>
-      <p class="prose">The pastels are only 1.3 to 2.2:1 against the page, so they cannot be text. For text, icons and borders on the bare page use these. All pass 4.5:1 and each is paired with an icon or word.</p>
+      <p class="prose">The fills are 1.4 to 2.5:1 against the page, so they cannot be text. For text, icons and borders on the bare page use these. All pass 4.5:1 and each is paired with an icon or word. In light mode they are Tol's darker colours; in dark mode they are the fills themselves.</p>
       <ul class="swatches">
         {inkKeys.map((k) => <Swatch key={k} name={k} t={c[k]} />)}
       </ul>
@@ -77,27 +75,20 @@ export function Colour() {
         <span class="ls-ink--warning"><Icon name="alert" small /> Warning text</span>
         <span class="ls-ink--info"><Icon name="info" small /> Info text</span>
       </div></div>
-      <p class="prose">On black, avoid pure red text: protanopes see it as near black. That is why the dark danger ink is a light coral.</p>
-
-      <h2>Crayon texture</h2>
-      <p class="prose">A flat fill with a faint diagonal wax hatch. Available as <code>--crayon-hatch</code>, or the <code>.ls-crayon</code> class.</p>
-      <Code code={`background-color: var(--coral);
-background-image: var(--crayon-hatch);
-border-radius: var(--radius-crayon);`} />
 
       <h2>Contrast</h2>
-      <p class="prose">Computed from the token values. Text needs 4.5:1; control edges here are held to 4.5:1 too. <code>npm run check</code> fails the build if any pair drops below. How the crayons hold up for colour-blind readers is on the <a href="#/vision">Colour vision</a> page.</p>
+      <p class="prose">Computed from the token values. Text needs 4.5:1; control edges here are held to 4.5:1 too. <code>npm run check</code> fails the build if any pair drops below. How the status colours hold up for colour-blind readers is on the <a href="#/vision">Colour vision</a> page.</p>
       <Table head={["Pair", "Ratio", "Needs", "Result"]} rows={pairs.map(([n, a, b, min]) => [n, fmt(ratio(a, b)), `${min}:1`, grade(ratio(a, b), min)])} />
     </Page>
   );
 }
 
 export function Vision() {
-  const crayons = crayonRoles.map(([k]) => [k, tokens.color[k].value]);
+  const fills = fillRoles.map(([k]) => [k, tokens.color[k].value]);
   const vis = ["protan", "deutan", "tritan"];
   const rows = [];
-  for (let i = 0; i < crayons.length; i++) for (let j = i + 1; j < crayons.length; j++) {
-    const [a, ha] = crayons[i], [b, hb] = crayons[j];
+  for (let i = 0; i < fills.length; i++) for (let j = i + 1; j < fills.length; j++) {
+    const [a, ha] = fills[i], [b, hb] = fills[j];
     rows.push([`${a} / ${b}`, ...["normal", ...vis].map((m) => distance(ha, hb, m).toFixed(0))]);
   }
   const worst = (r) => Math.min(...r.slice(1).map(Number));
@@ -105,12 +96,12 @@ export function Vision() {
   return (
     <Page title="Colour vision" lead="Roughly 1 in 12 men and 1 in 200 women see red and green differently. Colour is never the only cue.">
       <h2>Simulation</h2>
-      <p class="prose">Each crayon as seen under simulated colour vision (Machado et al. 2009, full severity). It is a worst-case guide for designers, not what every colour-blind person sees; many see more than this.</p>
+      <p class="prose">Each status colour as seen under simulated colour vision (Machado et al. 2009, full severity). It is a worst-case guide for designers, not what every colour-blind person sees; many see more than this.</p>
       <div class="table-wrap" tabIndex={0} role="region" aria-label="Simulation, scrollable">
         <table>
-          <thead><tr><th scope="col">Crayon</th>{modes.map((m) => <th scope="col" key={m}>{modeLabel[m]}</th>)}</tr></thead>
+          <thead><tr><th scope="col">State</th>{modes.map((m) => <th scope="col" key={m}>{modeLabel[m]}</th>)}</tr></thead>
           <tbody>
-            {crayons.map(([k, hex]) => (
+            {fills.map(([k, hex]) => (
               <tr key={k}>
                 <th scope="row">{k}</th>
                 {modes.map((m) => {
@@ -124,16 +115,18 @@ export function Vision() {
       </div>
 
       <h2>How far apart are they</h2>
-      <p class="prose">Perceptual distance (CIELAB ΔE) between each pair, under each vision type. Typical vision must be 15 or more. Below 8 under any simulation fails the build. Between 8 and 15 passes, but the pair must carry an icon or shape beside the colour (flagged below).</p>
+      <p class="prose">Perceptual distance (CIELAB ΔE) between each pair, under each vision type. The build fails below 12 under any simulation. Between 12 and 15 passes but is flagged; the pair must carry an icon or shape beside the colour.</p>
       <Table head={["Pair", "Typical", "Protan", "Deutan", "Tritan", "Note"]} rows={rows.map((r) => [r[0], r[1], r[2], r[3], r[4], worst(r) < 15 ? "Needs icon or shape" : "Distinct"])} />
+
+      <h2>Greyscale</h2>
+      <p class="prose">The four fills sit at similar lightness, so in greyscale they look alike. That is why every state has a different icon and border shape, and why colour is never the only cue. Switch on <b>Reduce colour</b> in <b>Display</b> to see exactly that.</p>
 
       <h2>What we do about it</h2>
       <ul class="prose">
-        <li>Every state has a second cue: error is a cross icon and an 8px bar, warning a triangle and a double border, success a check, destructive a dashed edge and a triangle, info an <code>i</code>.</li>
-        <li>Crayons are separated by lightness as well as hue, and coral is deeper than the others so it stays apart from green.</li>
-        <li>Text never sits on a hue alone: crayon text is <code>#111111</code> and ink variants clear 4.5:1.</li>
+        <li>Four colours only. Fewer colours means bigger gaps: four reach ΔE 18 under every vision type, where six reached 11.</li>
+        <li>Error is a cross icon and an 8px bar, warning a triangle and a double border, success a check, destructive a dashed edge and a triangle, info an <code>i</code>.</li>
+        <li>Text never sits on a hue alone: fill text is <code>#111111</code> and ink variants clear 4.5:1.</li>
         <li>Prefer labels on the thing itself over a colour key somewhere else.</li>
-        <li>Users can switch off colour entirely from <b>Display</b> (greyscale crayons), which proves the second cues work. Try it.</li>
       </ul>
     </Page>
   );
@@ -245,7 +238,7 @@ export function Accessibility() {
     ["Landmarks", "header, main, footer; one h1; no skipped heading levels; a skip link"],
     ["Scripts", "Content sites work with JavaScript off"],
     ["Zoom", "Works at 200% text size and at 320px width"],
-    ["Colour", "Never alone: every state also has a word, icon or shape. Crayons are checked under protan, deutan and tritan simulation in CI"],
+    ["Colour", "Never alone: every state also has a word, icon or shape. The four status colours are checked under protan, deutan and tritan simulation in CI"],
     ["Display settings", "Larger text, high contrast and reduced colour, all token-driven"],
     ["Theme", "Declare color-scheme and theme-color for both themes"],
     ["Interruptions", "No autoplay, popups, timers or cookie banners"],
@@ -260,11 +253,11 @@ export function Accessibility() {
       <h2>State encoding</h2>
       <Table head={["State", "Treatment"]} rows={[
         ["Disabled", "Dashed grey edge"],
-        ["Error", "Cross icon, 8px left bar, hidden prefix; coral crayon"],
-        ["Success", "Check icon, default 2px border; green crayon"],
-        ["Warning", "Triangle icon, double border; amber crayon"],
-        ["Info", "i icon, hairline border; teal crayon"],
-        ["Destructive", "Dashed border plus triangle icon; coral crayon"],
+        ["Error", "Cross icon, 8px left bar, hidden prefix; danger fill"],
+        ["Success", "Check icon, default 2px border; success fill"],
+        ["Warning", "Triangle icon, double border; warning fill"],
+        ["Info", "i icon, hairline border; info fill"],
+        ["Destructive", "Dashed border plus triangle icon; danger fill"],
         ["Stale", "Clock icon, 3px double border"],
         ["Unverified", "Alert icon, dashed border"],
       ]} />

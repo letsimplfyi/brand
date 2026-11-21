@@ -27,7 +27,7 @@ export function Wordmark({ as: Tag = "span", href, animate = true, fit = false, 
   );
 }
 
-/** variant: default | primary (the one forward action) | outbound | danger (coral, dashed, alert icon) */
+/** variant: default | primary (the one forward action) | outbound | danger (danger fill, dashed edge, triangle icon) */
 export function Button({ variant = "default", small, icon, children, class: cls, ...rest }) {
   const Tag = rest.href ? "a" : "button";
   return (

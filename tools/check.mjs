@@ -15,26 +15,26 @@ try { execFileSync("node", ["tools/build-tokens.mjs", "--check"], { cwd: root, s
 
 // 2. Contrast floor.
 const t = JSON.parse(read("tokens/tokens.json")).color;
-const crayons = Object.entries(t).filter(([n, v]) => !("light" in v) && !n.endsWith("-ink")).map(([n, v]) => [n, v.value]);
+const fills = Object.entries(t).filter(([n, v]) => !("light" in v) && !n.endsWith("-ink")).map(([n, v]) => [n, v.value]);
 const inks = Object.keys(t).filter((n) => n.endsWith("-ink") && n !== "crayon-ink");
 const need = [];
 for (const m of ["light", "dark"]) {
   need.push([`ink/page ${m}`, t.ink[m], t.page[m], 4.5], [`muted/page ${m}`, t.muted[m], t.page[m], 4.5], [`line/page ${m}`, t.line[m], t.page[m], 4.5]);
   for (const k of inks) need.push([`${k}/page ${m}`, t[k][m], t.page[m], 4.5]);
 }
-for (const [k, v] of crayons) need.push([`crayon-ink/${k}`, t["crayon-ink"].light, v, 4.5]);
+for (const [k, v] of fills) need.push([`crayon-ink/${k}`, t["crayon-ink"].light, v, 4.5]);
 need.push(["ink/receipt light", "#111111", t.receipt.light, 4.5], ["ink/receipt dark", "#111111", t.receipt.dark, 4.5]);
 for (const [n, a, b, min] of need) if (ratio(a, b) < min) bad(`contrast ${n} is ${ratio(a, b).toFixed(2)}, needs ${min}`);
 
-// 2b. Colour vision: crayons must stay apart under simulated protan, deutan and tritan vision.
-// Below 8 is a failure. Below 15 is allowed but means the pair must never be told apart by colour alone.
+// 2b. Colour vision: status fills must stay apart under simulated protan, deutan and tritan vision.
+// Below 12 is a failure. Below 15 is allowed but means the pair must never be told apart by colour alone.
 const close = [];
-for (let i = 0; i < crayons.length; i++) for (let j = i + 1; j < crayons.length; j++) {
-  const [a, ha] = crayons[i], [b, hb] = crayons[j];
-  if (distance(ha, hb) < 15) bad(`crayons ${a}/${b} too close for typical vision (${distance(ha, hb).toFixed(0)})`);
+for (let i = 0; i < fills.length; i++) for (let j = i + 1; j < fills.length; j++) {
+  const [a, ha] = fills[i], [b, hb] = fills[j];
+  if (distance(ha, hb) < 15) bad(`fills ${a}/${b} too close for typical vision (${distance(ha, hb).toFixed(0)})`);
   for (const m of ["protan", "deutan", "tritan"]) {
     const d = distance(ha, hb, m);
-    if (d < 8) bad(`crayons ${a}/${b} collapse under ${m} (${d.toFixed(0)})`);
+    if (d < 12) bad(`fills ${a}/${b} collapse under ${m} (${d.toFixed(0)})`);
     else if (d < 15) close.push(`${a}/${b} ${m} ${d.toFixed(0)}`);
   }
 }

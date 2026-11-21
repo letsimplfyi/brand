@@ -1,12 +1,10 @@
 /* GENERATED from tokens/tokens.json by tools/build-tokens.mjs. Do not edit. */
 :root {
   color-scheme: light dark;
-  --yellow: #FFE066;
-  --blue: #9FCBFF;
-  --green: #A7E3A0;
-  --coral: #F76C5A;
-  --amber: #FFB35C;
-  --teal: #7ED6C9;
+  --danger: #EE8866;
+  --warning: #EEDD88;
+  --success: #44BB99;
+  --info: #99DDFF;
   --root-size: 112.5%;
   --weight-regular: 400;
   --weight-medium: 500;
@@ -49,11 +47,9 @@
   --hair: 1px solid var(--line);
   --focus-width: 3px;
   --radius-square: 0;
-  --radius-crayon: 2px 3px 2px 4px;
   --motion-state: 120ms;
   --motion-sheet: 200ms;
   --motion-wordmark: 4.4s;
-  --crayon-hatch: repeating-linear-gradient(115deg, rgb(255 255 255 / 22%) 0 1.5px, transparent 1.5px 4px, rgb(0 0 0 / 5%) 4px 5px, transparent 5px 7px);
   --tape-hatch: repeating-linear-gradient(115deg, rgb(255 255 255 / 25%) 0 1.5px, transparent 1.5px 4px);
   --page: #FFFFFF;
   --ink: #000000;
@@ -62,10 +58,10 @@
   --tape: #D2D2D2;
   --receipt: #FBF6E9;
   --crayon-ink: #111111;
-  --danger-ink: #B3261E;
-  --success-ink: #1B6E3C;
-  --warning-ink: #8A5A00;
-  --info-ink: #0B5CAD;
+  --danger-ink: #CC3311;
+  --success-ink: #228833;
+  --warning-ink: #775500;
+  --info-ink: #4477BB;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -76,10 +72,10 @@
     --tape: #5A5A5A;
     --receipt: #EDE7D6;
     --crayon-ink: #111111;
-    --danger-ink: #FF8F7A;
-    --success-ink: #7FDB9A;
-    --warning-ink: #FFC24D;
-    --info-ink: #8CC4FF;
+    --danger-ink: #EE8866;
+    --success-ink: #44BB99;
+    --warning-ink: #EEDD88;
+    --info-ink: #99DDFF;
   }
 }
 :root[data-theme="light"] {
@@ -91,10 +87,10 @@
   --tape: #D2D2D2;
   --receipt: #FBF6E9;
   --crayon-ink: #111111;
-  --danger-ink: #B3261E;
-  --success-ink: #1B6E3C;
-  --warning-ink: #8A5A00;
-  --info-ink: #0B5CAD;
+  --danger-ink: #CC3311;
+  --success-ink: #228833;
+  --warning-ink: #775500;
+  --info-ink: #4477BB;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
@@ -105,10 +101,10 @@
   --tape: #5A5A5A;
   --receipt: #EDE7D6;
   --crayon-ink: #111111;
-  --danger-ink: #FF8F7A;
-  --success-ink: #7FDB9A;
-  --warning-ink: #FFC24D;
-  --info-ink: #8CC4FF;
+  --danger-ink: #EE8866;
+  --success-ink: #44BB99;
+  --warning-ink: #EEDD88;
+  --info-ink: #99DDFF;
 }
 :root[data-text="large"] {
   --root-size: 125%;
@@ -118,12 +114,10 @@
   --line: var(--ink);
 }
 :root[data-colour="reduced"] {
-  --yellow: #E6E6E6;
-  --blue: #E6E6E6;
-  --green: #E6E6E6;
-  --coral: #E6E6E6;
-  --amber: #E6E6E6;
-  --teal: #E6E6E6;
+  --danger: #E6E6E6;
+  --warning: #E6E6E6;
+  --success: #E6E6E6;
+  --info: #E6E6E6;
   --danger-ink: var(--ink);
   --success-ink: var(--ink);
   --warning-ink: var(--ink);

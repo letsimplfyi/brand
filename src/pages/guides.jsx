@@ -68,7 +68,7 @@ import tokens from "@letsimplfyi/brand/tokens.json" with { type: "json" };`} />
       <Table head={["Attribute", "Effect"]} rows={[
         [<code>data-text="large"</code>, "Root size 20px instead of 18px."],
         [<code>data-contrast="high"</code>, "Muted text and hairlines become full ink."],
-        [<code>data-colour="reduced"</code>, "Crayons become light grey and ink variants become ink. Icons and shapes carry the meaning."],
+        [<code>data-colour="reduced"</code>, "Status fills become light grey and ink variants become ink. Icons and shapes carry the meaning."],
       ]} />
 
       <h2>Changing the brand</h2>
@@ -104,12 +104,12 @@ export function Credits() {
       <p class="prose">Nothing here implies endorsement. The same list lives in <code>CREDITS.md</code>.</p>
 
       <h2>Design lineage</h2>
-      <p class="prose"><b>letsimpl.fyi</b> and <b>chaikadi.fyi</b>, by Vysakh Premkumar. The wordmark, crayon colours, type scale, receipt, sheets and accessibility rules are inherited from those two design books.</p>
+      <p class="prose"><b>letsimpl.fyi</b> and <b>chaikadi.fyi</b>, by Vysakh Premkumar. The wordmark, type scale, receipt, sheets and accessibility rules are inherited from those two design books. Their yellow, blue and green were dropped in v0.3: the brand is black and white.</p>
       <p><Ext href="https://letsimpl.fyi">letsimpl.fyi</Ext> <Ext href="https://github.com/tellmeY18/chaikadi.fyi">chaikadi.fyi</Ext></p>
 
       <h2>Research and standards</h2>
       <Table head={["Who", "What we took", "Link"]} rows={[
-        ["Paul Tol, SRON", "Our approach: a perceptual colour-distance metric, simulation under red-blind and green-blind vision, the \"light\" scheme made for fills with dark text, and greyscale-contrast findings. No Tol colour is in our tokens yet; any we adopt will be listed here.", <Ext href="https://sronpersonalpages.nl/~pault/">Paul Tol's Notes</Ext>],
+        ["Paul Tol, SRON", "The four status colours (danger #EE8866, warning #EEDD88, success #44BB99, info #99DDFF) from his \"light\" scheme, and the light-mode ink variants (#CC3311, #775500, #228833, #4477BB) from his vibrant and dark schemes. Also our approach: a perceptual colour-distance metric, simulation under red-blind and green-blind vision, and greyscale-contrast findings.", <Ext href="https://sronpersonalpages.nl/~pault/">Paul Tol's Notes</Ext>],
         ["Masataka Okabe and Kei Ito", "Colour Universal Design: redundant coding, no red against green at equal lightness, caution with pale pairs and with red on black.", <Ext href="https://jfly.uni-koeln.de/color/">Color Universal Design</Ext>],
         ["W3C WAI", "WCAG 2.2, including 1.4.1 Use of Color and the relative-luminance contrast formula.", <Ext href="https://www.w3.org/WAI/WCAG22/">WCAG 2.2</Ext>],
         ["Machado, Oliveira, Fernandes", "The colour-vision-deficiency simulation matrices (IEEE TVCG 15(6), 2009), applied in linear RGB.", "A Physiologically-based Model for Simulation of Color Vision Deficiency"],

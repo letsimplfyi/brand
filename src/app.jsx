@@ -89,7 +89,7 @@ export function App() {
         <p class="ls-hint">Saved on this device only. Each setting is a token override, so apps can offer the same.</p>
         <Check checked={display.text} onChange={() => toggle("text")}>Larger text (20px)</Check>
         <Check checked={display.contrast} onChange={() => toggle("contrast")}>High contrast</Check>
-        <Check checked={display.colour} onChange={() => toggle("colour")}>Reduce colour (greyscale crayons)</Check>
+        <Check checked={display.colour} onChange={() => toggle("colour")}>Reduce colour (greyscale status colours)</Check>
         <p><Button small onClick={reset}>Reset</Button></p>
       </Sheet>
       <footer class="foot">

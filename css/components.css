@@ -6,16 +6,18 @@
 .ls-skip:focus { top: 8px; }
 
 /* ---------- Crayon fill (shared) ---------- */
-.ls-crayon { color: var(--crayon-ink); background-image: var(--crayon-hatch); border-radius: var(--radius-crayon); }
-.ls-crayon--yellow { background-color: var(--yellow); }
-.ls-crayon--blue { background-color: var(--blue); }
-.ls-crayon--green { background-color: var(--green); }
+/* Status fills: flat, square, #111 text. Only for danger, warning, success, info. */
+.ls-fill { color: var(--crayon-ink); }
+.ls-fill--danger { background-color: var(--danger); }
+.ls-fill--warning { background-color: var(--warning); }
+.ls-fill--success { background-color: var(--success); }
+.ls-fill--info { background-color: var(--info); }
 
 /* ---------- Wordmark ---------- */
 .ls-mark { margin: 0; padding: 0; border: 0; font-size: min(calc((100vw - 2 * var(--pad)) / 7.9), 11rem); line-height: 1.1; font-weight: 700; }
 .ls-mark--fit { font-size: 2.25rem; }
 .ls-mark a, .ls-mark > span { display: inline-block; text-decoration: none; white-space: nowrap; }
-.ls-mark mark { display: inline-block; color: var(--crayon-ink); background-color: var(--yellow); background-image: var(--crayon-hatch); border-radius: var(--radius-crayon); }
+.ls-mark mark { display: inline-block; color: var(--page); background: var(--ink); }
 @media (prefers-reduced-motion: no-preference) {
   .ls-mark--animate .dot { animation: ls-dot var(--motion-wordmark) .3s steps(1, end) 1 both; }
   .ls-mark--animate .eye { animation: ls-eye var(--motion-wordmark) .3s steps(1, end) 1 both; }
@@ -36,10 +38,8 @@
   transition: background-color var(--motion-state), color var(--motion-state);
 }
 .ls-btn:hover { background: var(--ink); color: var(--page); }
-.ls-btn--primary, .ls-btn--outbound { color: var(--crayon-ink); background-image: var(--crayon-hatch); border: 2px solid var(--crayon-ink); border-radius: var(--radius-crayon); }
-.ls-btn--primary { background-color: var(--green); }
-.ls-btn--outbound { background-color: var(--blue); }
-.ls-btn--primary:hover, .ls-btn--outbound:hover { color: var(--crayon-ink); text-decoration: underline; text-underline-offset: 4px; }
+.ls-btn--primary { color: var(--page); background: var(--ink); }
+.ls-btn--primary:hover { color: var(--ink); background: var(--page); }
 
 .ls-btn--small { min-height: var(--touch-min); font-size: var(--text-secondary); }
 .ls-btn[disabled], .ls-btn[aria-disabled="true"] { color: var(--muted); border: 2px dashed var(--line); background: var(--page); background-image: none; cursor: not-allowed; }
@@ -47,11 +47,7 @@
 .ls-btn--outbound::after { content: "\2197"; }
 
 /* ---------- Link ---------- */
-a.ls-out {
-  display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--touch-min); padding: var(--space-2) var(--space-3);
-  color: var(--crayon-ink); text-decoration: none; font-size: var(--text-secondary); font-weight: 700; overflow-wrap: anywhere;
-  background-color: var(--blue); background-image: var(--crayon-hatch); border: 2px solid var(--crayon-ink); border-radius: var(--radius-crayon);
-}
+a.ls-out { display: inline-flex; align-items: center; gap: var(--space-1); min-height: var(--touch-min); color: var(--ink); font-weight: 700; text-underline-offset: 4px; overflow-wrap: anywhere; }
 a.ls-out::after { content: "\2197"; font-weight: 700; }
 a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
 
@@ -59,7 +55,6 @@ a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
 .ls-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-2) 0 0; padding: 0; list-style: none; }
 .ls-tag { display: inline-block; padding: 2px var(--space-2); font-size: var(--text-secondary); font-weight: var(--weight-medium); border: 1px solid var(--ink); }
 .ls-tag--role { border-color: var(--crayon-ink); }
-.ls-tag--green { color: var(--crayon-ink); background-color: var(--green); background-image: var(--crayon-hatch); border-radius: var(--radius-crayon); font-weight: 700; }
 .ls-tag--sample { border-style: dashed; font-weight: 700; }
 
 /* ---------- Card ---------- */
@@ -148,22 +143,20 @@ a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
 .ls-slot b { color: var(--ink); }
 
 @media (forced-colors: active) {
-  .ls-mark mark, .ls-crayon { background: Mark; color: MarkText; }
+  .ls-mark mark, .ls-fill { background: Mark; color: MarkText; }
   .ls-print { border-color: CanvasText; }
 }
 
-/* ---------- v0.2: status crayons ---------- */
-.ls-crayon--coral { background-color: var(--coral); }
-.ls-crayon--amber { background-color: var(--amber); }
-.ls-crayon--teal { background-color: var(--teal); }
-.ls-tag--coral, .ls-tag--amber, .ls-tag--teal { color: var(--crayon-ink); background-image: var(--crayon-hatch); border: 1px solid var(--crayon-ink); border-radius: var(--radius-crayon); font-weight: 700; }
-.ls-tag--coral { background-color: var(--coral); }
-.ls-tag--amber { background-color: var(--amber); }
-.ls-tag--teal { background-color: var(--teal); }
+/* ---------- Status tags and destructive button ---------- */
+.ls-tag--danger, .ls-tag--warning, .ls-tag--success, .ls-tag--info { color: var(--crayon-ink); border: 1px solid var(--crayon-ink); font-weight: 700; }
+.ls-tag--danger { background-color: var(--danger); }
+.ls-tag--warning { background-color: var(--warning); }
+.ls-tag--success { background-color: var(--success); }
+.ls-tag--info { background-color: var(--info); }
 
-/* Destructive: coral fill, dashed edge, alert icon (added by the component). */
-.ls-btn--danger { color: var(--crayon-ink); background-color: var(--coral); background-image: var(--crayon-hatch); border: 2px dashed var(--crayon-ink); border-radius: var(--radius-crayon); }
-.ls-btn--danger:hover { color: var(--crayon-ink); text-decoration: underline; text-underline-offset: 4px; }
+/* Destructive: danger fill, dashed edge, triangle icon (added by the component). */
+.ls-btn--danger { color: var(--crayon-ink); background-color: var(--danger); border: 2px dashed var(--crayon-ink); }
+.ls-btn--danger:hover { color: var(--crayon-ink); background-color: var(--danger); text-decoration: underline; text-underline-offset: 4px; }
 
 /* Ink variants: for text and icons on the bare page. Always paired with an icon or word. */
 .ls-ink--danger { color: var(--danger-ink); }
@@ -177,9 +170,3 @@ a.ls-out:hover { text-decoration: underline; text-underline-offset: 4px; }
 .ls-callout--error, .ls-callout--warning, .ls-callout--info, .ls-callout--success { font-weight: var(--weight-medium); }
 
 .ls-input:disabled, .ls-select:disabled { cursor: not-allowed; }
-
-/* Crayon buttons keep their fill on hover (the generic .ls-btn:hover inverts). */
-.ls-btn--primary:hover, .ls-btn--outbound:hover, .ls-btn--danger:hover { background-image: var(--crayon-hatch); }
-.ls-btn--primary:hover { background-color: var(--green); }
-.ls-btn--outbound:hover { background-color: var(--blue); }
-.ls-btn--danger:hover { background-color: var(--coral); }

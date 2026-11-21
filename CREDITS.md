@@ -6,18 +6,22 @@ only learned from it, we say that too. Nothing below implies endorsement.
 ## Design lineage
 
 - **letsimpl.fyi** (the org site) and **chaikadi.fyi** (the tea-break app), by
-  Vysakh Premkumar. The wordmark, crayon colours, type scale, receipt, sheets and
-  accessibility rules in this repo are inherited from those two design books.
+  Vysakh Premkumar. The wordmark, type scale, receipt, sheets and
+  accessibility rules in this repo are inherited from those two design books. Their yellow, blue and green were dropped in v0.3: the brand is black and white.
   https://letsimpl.fyi · https://github.com/tellmeY18/chaikadi.fyi
 
 ## Research and standards we rely on
 
 - **Paul Tol**, SRON Netherlands Institute for Space Research. *Paul Tol's Notes:
-  colour schemes and templates.* His work shaped our approach: judging colour
-  distance with a perceptual metric, checking palettes under red-blind and
-  green-blind simulation, the "light" scheme designed for fills that carry dark
-  text, and the greyscale-contrast findings. No Tol colour is in our tokens yet;
-  if we adopt any, the exact colours are listed here.
+  colour schemes and templates.* We use his colours and his method.
+  - Status fills, from the "light" scheme (made for fills that carry dark text):
+    danger `#EE8866` (orange), warning `#EEDD88` (light yellow), success `#44BB99`
+    (mint), info `#99DDFF` (light cyan).
+  - Light-mode ink variants: danger `#CC3311` (vibrant red), success `#228833`
+    (dark green), warning `#775500` (dark yellow), info `#4477BB` (dark blue).
+    Dark-mode inks are the fills above.
+  - Method: a perceptual colour-distance metric, simulation under red-blind and
+    green-blind vision, and the greyscale-contrast findings.
   https://sronpersonalpages.nl/~pault/
 - **Masataka Okabe and Kei Ito.** *Color Universal Design (CUD): how to make
   figures and presentations that are friendly to colorblind people.* Source of
