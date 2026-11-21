@@ -1,0 +1,32 @@
+{
+  "name": "@letsimplfyi/brand",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Source of truth for letsimpl.fyi design: tokens, CSS, Preact components, assets and the brand.letsimpl.fyi showcase.",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "repository": "github:letsimplfyi/brand",
+  "exports": {
+    "./tokens.json": "./tokens/tokens.json",
+    "./tokens.css": "./tokens/tokens.css",
+    "./base.css": "./css/base.css",
+    "./components.css": "./css/components.css",
+    "./fonts/*": "./fonts/*",
+    "./components": "./components/index.jsx",
+    "./assets/manifest.json": "./assets/manifest.json"
+  },
+  "scripts": {
+    "tokens": "node tools/build-tokens.mjs",
+    "dev": "npm run tokens && vite",
+    "build": "npm run tokens && vite build && node tools/publish.mjs",
+    "preview": "vite preview",
+    "check": "node tools/check.mjs"
+  },
+  "dependencies": {
+    "preact": "^10.29.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.0",
+    "vite": "^7.0.0"
+  }
+}

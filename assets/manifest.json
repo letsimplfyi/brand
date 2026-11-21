@@ -1,0 +1,15 @@
+{
+  "$comment": "Every brand asset the org needs. Agents never generate these. When the founder supplies one, drop the file in assets/, set status to \"ready\" and fill in path. Anything not ready renders as a placeholder in the showcase.",
+  "assets": [
+    { "id": "logo-primary", "group": "Logo", "name": "Logo, primary", "status": "missing", "path": null, "ratio": "16 / 9" },
+    { "id": "logo-mark", "group": "Logo", "name": "Logo mark (symbol only)", "status": "missing", "path": null, "ratio": "1 / 1" },
+    { "id": "logo-mono", "group": "Logo", "name": "Logo, one colour", "status": "missing", "path": null, "ratio": "16 / 9" },
+    { "id": "favicon", "group": "Icons", "name": "Favicon (SVG)", "status": "missing", "path": null, "ratio": "1 / 1" },
+    { "id": "app-icon", "group": "Icons", "name": "App icon (192, 512, maskable, Apple touch)", "status": "missing", "path": null, "ratio": "1 / 1" },
+    { "id": "loading", "group": "Screens", "name": "Loading screen", "status": "missing", "path": null, "ratio": "9 / 16" },
+    { "id": "splash", "group": "Screens", "name": "PWA splash", "status": "missing", "path": null, "ratio": "9 / 16" },
+    { "id": "og-image", "group": "Social", "name": "Social share image (1200 x 630)", "status": "missing", "path": null, "ratio": "1200 / 630" },
+    { "id": "empty-states", "group": "Illustration", "name": "Empty-state illustrations", "status": "missing", "path": null, "ratio": "4 / 3" },
+    { "id": "photography", "group": "Illustration", "name": "Photography direction", "status": "missing", "path": null, "ratio": "4 / 3" }
+  ]
+}
