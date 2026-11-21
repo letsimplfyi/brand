@@ -50,6 +50,11 @@ See [DESIGN.md](DESIGN.md) for the decisions and AGENTS.md for deploy setup.
 | Loading screen, splash, social image | Placeholder |
 | Illustration and photography direction | Placeholder |
 
+## Credits
+
+See [CREDITS.md](CREDITS.md) and https://brand.letsimpl.fyi/#/credits: Paul Tol, Okabe and Ito,
+the W3C, Machado et al., the Braille Institute, Quote-Unquote Apps, the Noto Project, Preact and Vite.
+
 ## Licence
 
 AGPL-3.0-or-later. Fonts in `fonts/` are SIL OFL 1.1; see the notices beside

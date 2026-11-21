@@ -1,0 +1,64 @@
+# Credits
+
+This brand stands on other people's work. Where we use it, we say so. Where we
+only learned from it, we say that too. Nothing below implies endorsement.
+
+## Design lineage
+
+- **letsimpl.fyi** (the org site) and **chaikadi.fyi** (the tea-break app), by
+  Vysakh Premkumar. The wordmark, crayon colours, type scale, receipt, sheets and
+  accessibility rules in this repo are inherited from those two design books.
+  https://letsimpl.fyi · https://github.com/tellmeY18/chaikadi.fyi
+
+## Research and standards we rely on
+
+- **Paul Tol**, SRON Netherlands Institute for Space Research. *Paul Tol's Notes:
+  colour schemes and templates.* His work shaped our approach: judging colour
+  distance with a perceptual metric, checking palettes under red-blind and
+  green-blind simulation, the "light" scheme designed for fills that carry dark
+  text, and the greyscale-contrast findings. No Tol colour is in our tokens yet;
+  if we adopt any, the exact colours are listed here.
+  https://sronpersonalpages.nl/~pault/
+- **Masataka Okabe and Kei Ito.** *Color Universal Design (CUD): how to make
+  figures and presentations that are friendly to colorblind people.* Source of
+  our rules on redundant coding, avoiding red against green at equal lightness,
+  pale low-saturation pairs and red on black. https://jfly.uni-koeln.de/color/
+- **W3C Web Accessibility Initiative.** *Web Content Accessibility Guidelines
+  (WCAG) 2.2*, including SC 1.4.1 Use of Color and the relative-luminance
+  contrast formula used in `src/contrast.js`. https://www.w3.org/WAI/WCAG22/
+- **Gustavo M. Machado, Manuel M. Oliveira, Leandro A. F. Fernandes.** *A
+  Physiologically-based Model for Simulation of Color Vision Deficiency.* IEEE
+  Transactions on Visualization and Computer Graphics 15(6), 2009. The
+  simulation matrices in `src/cvd.js` are theirs. We apply them in linear RGB
+  and measure with CIELAB ΔE.
+- **CIE.** CIELAB colour space, used for the distance measure.
+
+## Fonts (SIL Open Font License 1.1)
+
+Each font ships with its licence beside it in `fonts/`.
+
+- **Atkinson Hyperlegible Mono** and **Atkinson Hyperlegible Next.** Copyright
+  2020-2024 The Atkinson Hyperlegible Project Authors. Created by the Braille
+  Institute of America for readers with low vision. We use the WOFF2 build
+  packaged by Fontsource. https://brailleinstitute.org/freefont ·
+  https://github.com/googlefonts/atkinson-hyperlegible-next ·
+  https://fontsource.org
+- **Courier Prime.** Copyright 2015 The Courier Prime Project Authors, Quote-Unquote
+  Apps. https://github.com/quoteunquoteapps/CourierPrime
+- **Noto Serif Malayalam.** Copyright 2022 The Noto Project Authors.
+  https://github.com/notofonts/malayalam
+
+## Software (MIT)
+
+- **Preact**, by Jason Miller and contributors. https://preactjs.com
+- **Vite**, by Evan You and contributors. https://vite.dev
+- **@preact/preset-vite**, by the Preact team.
+
+## Licence of this repo
+
+AGPL-3.0-or-later, see `LICENSE`. Third-party material keeps its own licence.
+
+## Adding a credit
+
+If you use something, add it here in the same change, with the author, what we
+took from it, the licence if it has one, and a link.

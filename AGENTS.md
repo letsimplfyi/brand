@@ -111,6 +111,9 @@ One-time setup (needs the founder's Cloudflare account; agents have no access):
 
 ## Working agreements
 
+- Credit what you use. Any borrowed colour, font, algorithm, library or idea goes
+  in `CREDITS.md` (and the Credits page in `src/pages/guides.jsx`) in the same
+  change: author, what we took, licence, link.
 - Never commit secrets, tokens or keys.
 - Small, focused commits with plain messages. Do not push, force-push or
   rewrite history unless asked.

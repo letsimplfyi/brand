@@ -2,13 +2,13 @@ import { useEffect, useState } from "preact/hooks";
 import { Button, Check, Icon, Input, Sheet, Wordmark } from "../components/index.jsx";
 import { useRoute } from "./router.js";
 import { nav, flat } from "./nav.js";
-import { Overview, Use, TokensPage } from "./pages/guides.jsx";
+import { Overview, Use, TokensPage, Credits } from "./pages/guides.jsx";
 import { Colour, Vision, Typography, Spacing, Motion, Accessibility } from "./pages/foundations.jsx";
 import { WordmarkPage, Assets } from "./pages/brand.jsx";
 import { ComponentPage } from "./pages/components.jsx";
 
 const pages = {
-  overview: Overview, use: Use, tokens: TokensPage,
+  overview: Overview, use: Use, tokens: TokensPage, credits: Credits,
   colour: Colour, vision: Vision, typography: Typography, spacing: Spacing, motion: Motion, accessibility: Accessibility,
   wordmark: WordmarkPage, assets: Assets,
 };
@@ -93,7 +93,7 @@ export function App() {
         <p><Button small onClick={reset}>Reset</Button></p>
       </Sheet>
       <footer class="foot">
-        <p>AGPL-3.0-or-later. Fonts keep their own OFL notices. <a href="https://github.com/letsimplfyi/brand">Source</a></p>
+        <p>AGPL-3.0-or-later. Fonts keep their own OFL notices. <a href="#/credits">Credits</a> · <a href="https://github.com/letsimplfyi/brand">Source</a></p>
       </footer>
     </div>
   );

@@ -31,6 +31,7 @@ export const nav = [
   ] },
   { group: "Reference", items: [
     { id: "tokens", title: "All tokens" },
+    { id: "credits", title: "Credits" },
   ] },
 ];
 export const flat = nav.flatMap((g) => g.items.map((i) => ({ ...i, group: g.group })));

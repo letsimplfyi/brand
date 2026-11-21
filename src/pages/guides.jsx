@@ -95,3 +95,42 @@ export function TokensPage() {
     </Page>
   );
 }
+
+const Ext = ({ href, children }) => <OutLink href={href}>{children}</OutLink>;
+
+export function Credits() {
+  return (
+    <Page title="Credits" lead="This brand stands on other people's work. Where we use it, we say so. Where we only learned from it, we say that too.">
+      <p class="prose">Nothing here implies endorsement. The same list lives in <code>CREDITS.md</code>.</p>
+
+      <h2>Design lineage</h2>
+      <p class="prose"><b>letsimpl.fyi</b> and <b>chaikadi.fyi</b>, by Vysakh Premkumar. The wordmark, crayon colours, type scale, receipt, sheets and accessibility rules are inherited from those two design books.</p>
+      <p><Ext href="https://letsimpl.fyi">letsimpl.fyi</Ext> <Ext href="https://github.com/tellmeY18/chaikadi.fyi">chaikadi.fyi</Ext></p>
+
+      <h2>Research and standards</h2>
+      <Table head={["Who", "What we took", "Link"]} rows={[
+        ["Paul Tol, SRON", "Our approach: a perceptual colour-distance metric, simulation under red-blind and green-blind vision, the \"light\" scheme made for fills with dark text, and greyscale-contrast findings. No Tol colour is in our tokens yet; any we adopt will be listed here.", <Ext href="https://sronpersonalpages.nl/~pault/">Paul Tol's Notes</Ext>],
+        ["Masataka Okabe and Kei Ito", "Colour Universal Design: redundant coding, no red against green at equal lightness, caution with pale pairs and with red on black.", <Ext href="https://jfly.uni-koeln.de/color/">Color Universal Design</Ext>],
+        ["W3C WAI", "WCAG 2.2, including 1.4.1 Use of Color and the relative-luminance contrast formula.", <Ext href="https://www.w3.org/WAI/WCAG22/">WCAG 2.2</Ext>],
+        ["Machado, Oliveira, Fernandes", "The colour-vision-deficiency simulation matrices (IEEE TVCG 15(6), 2009), applied in linear RGB.", "A Physiologically-based Model for Simulation of Color Vision Deficiency"],
+        ["CIE", "CIELAB colour space, for the distance measure.", ""],
+      ]} />
+
+      <h2>Fonts</h2>
+      <p class="prose">All SIL Open Font License 1.1. Each licence ships beside its font in <code>fonts/</code>.</p>
+      <Table head={["Font", "Copyright", "Link"]} rows={[
+        ["Atkinson Hyperlegible Mono and Next", "2020-2024 The Atkinson Hyperlegible Project Authors. Created by the Braille Institute of America. WOFF2 packaged by Fontsource.", <Ext href="https://brailleinstitute.org/freefont">Braille Institute</Ext>],
+        ["Courier Prime", "2015 The Courier Prime Project Authors, Quote-Unquote Apps", <Ext href="https://github.com/quoteunquoteapps/CourierPrime">GitHub</Ext>],
+        ["Noto Serif Malayalam", "2022 The Noto Project Authors", <Ext href="https://github.com/notofonts/malayalam">GitHub</Ext>],
+      ]} />
+
+      <h2>Software</h2>
+      <Table head={["Project", "By", "Licence"]} rows={[
+        [<Ext href="https://preactjs.com">Preact</Ext>, "Jason Miller and contributors", "MIT"],
+        [<Ext href="https://vite.dev">Vite</Ext>, "Evan You and contributors", "MIT"],
+        ["@preact/preset-vite", "The Preact team", "MIT"],
+      ]} />
+      <p class="ls-hint">This repo is AGPL-3.0-or-later. Third-party material keeps its own licence.</p>
+    </Page>
+  );
+}
