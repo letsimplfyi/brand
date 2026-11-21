@@ -73,7 +73,7 @@ if (/style-src [^;\n]*unsafe/.test(headers)) bad("style-src is too loose");
 if (existsSync(root + "dist/index.html")) {
   const html = read("dist/index.html");
   if (/<script(?![^>]*\bsrc=)/.test(html) || /<style/.test(html) || / style="/.test(html)) bad("dist/index.html has inline script or style");
-  for (const p of ["tokens/tokens.css", "tokens/tokens.json", "css/base.css", "css/components.css", "_headers"]) if (!existsSync(`${root}dist/${p}`)) bad(`dist/${p} is missing`);
+  for (const p of ["tokens/tokens.css", "tokens/tokens.json", "css/base.css", "css/components.css", "_headers", "llms.txt", "llms-full.txt"]) if (!existsSync(`${root}dist/${p}`)) bad(`dist/${p} is missing`);
 }
 
 if (failed) process.exit(1);

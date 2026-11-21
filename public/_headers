@@ -22,3 +22,11 @@
 /assets/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=300
+
+/llms.txt
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300
+
+/llms-full.txt
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300

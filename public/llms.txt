@@ -1,0 +1,55 @@
+# letsimpl.fyi brand
+
+> Source of truth for design across letsimpl.fyi projects: design tokens, framework-free CSS, Preact components, fonts and brand assets. The identity is plain black and white with no brand colour. Colour exists only for four functional status states. Function over form.
+
+Everything is plain files at stable URLs with open CORS. Read the rules below before generating any UI or brand material.
+
+## Rules for agents
+
+- Never create brand material: no logos, logo marks, favicons, app icons, loading screens, splash screens, social images or illustrations. Missing assets are listed in /assets/manifest.json with status "missing" and must stay placeholders.
+- Do not write brand copy (taglines, mission, values). Neutral demo labels only.
+- No brand colour. Use black and white. The only colours are the four status fills: danger, warning, success, info. Never use colour for decoration, and never as the only cue: every state also needs an icon, word or shape.
+- Do not invent colours, fonts or components. Use the tokens; do not hard-code hex values.
+- Text on a status fill is always #111111. Use the *-ink tokens for coloured text on the bare page.
+- Square corners, 2px ink borders, no shadows, no gradients, no hatch texture. Left-align prose.
+- Minimum text 16px for read text, 14px for short optional labels. Touch targets at least 44px. 3px focus outline.
+- No third-party requests, trackers, CDNs or inline scripts/styles. Self-host fonts.
+- Honour prefers-color-scheme, prefers-reduced-motion and the display attributes below.
+
+## Use it
+
+- [tokens.css](https://brand.letsimpl.fyi/tokens/tokens.css): generated CSS custom properties, light and dark. Import first.
+- [base.css](https://brand.letsimpl.fyi/css/base.css): fonts, reset, element defaults, .ls-prose.
+- [components.css](https://brand.letsimpl.fyi/css/components.css): components, classes prefixed ls-.
+- [tokens.json](https://brand.letsimpl.fyi/tokens/tokens.json): machine-readable source of truth for every value.
+- Preact: `npm i github:letsimplfyi/brand`, then `import { Button, Callout, Wordmark } from "@letsimplfyi/brand/components"`.
+- Display settings go on <html>: data-theme="light|dark", data-text="large", data-contrast="high", data-colour="reduced".
+
+## Key facts
+
+- Fonts: Atkinson Hyperlegible Mono (interface, numbers, code; --font-ui), Atkinson Hyperlegible Next (prose; --font-read), Courier Prime (receipts only), Noto Serif Malayalam (loads only for Malayalam).
+- Root size 18px. Sizes are rem tokens: --text-body 18px, --text-secondary 16px, --text-small 14px. Weights 400, 500 (secondary text), 700.
+- Page: white in light, black in dark. Ink: black in light, white in dark. Tokens --page, --ink, --muted, --line.
+- Status fills: --danger #EE8866, --warning #EEDD88, --success #44BB99, --info #99DDFF. Ink variants: --danger-ink, --warning-ink, --success-ink, --info-ink (all at least 4.5:1 on the page).
+- Wordmark: live text "letsimpl.fyi" where the "." and the "i" sit on inverted blocks and swap places once on load. Use the Wordmark component or the markup on the Wordmark page. Never redraw it.
+- Primary action is a solid ink button (.ls-btn--primary), at most one per screen. Destructive is .ls-btn--danger (dashed edge, triangle icon). Outbound links get a trailing arrow (.ls-out or .ls-btn--outbound).
+- States: error = cross icon + 8px left bar; warning = triangle + double border; success = check icon; info = "i" icon + hairline border.
+- Spacing scale: 4, 8, 12, 16, 24, 32, 48, 64px (--space-1 to --space-8). Prose measure 560px.
+
+## Docs
+
+- [Full text version of these docs](https://brand.letsimpl.fyi/llms-full.txt): this file plus DESIGN.md and the complete token list.
+- [Overview](https://brand.letsimpl.fyi/#/overview)
+- [Use in an app](https://brand.letsimpl.fyi/#/use)
+- [Colour](https://brand.letsimpl.fyi/#/colour)
+- [Colour vision](https://brand.letsimpl.fyi/#/vision)
+- [Typography](https://brand.letsimpl.fyi/#/typography)
+- [Accessibility](https://brand.letsimpl.fyi/#/accessibility)
+- [Wordmark](https://brand.letsimpl.fyi/#/wordmark)
+- [Assets and placeholders](https://brand.letsimpl.fyi/#/assets)
+- [Credits](https://brand.letsimpl.fyi/#/credits)
+
+## Optional
+
+- [Source](https://github.com/letsimplfyi/brand): AGENTS.md has the full contributor rules, DESIGN.md the decisions, CREDITS.md the sources.
+- [Asset manifest](https://brand.letsimpl.fyi/assets/manifest.json): every brand asset and whether it exists yet.

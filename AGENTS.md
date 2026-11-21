@@ -67,7 +67,7 @@ components/      Preact components + icons, exported as @letsimplfyi/brand/compo
 fonts/           self-hosted WOFF2 + OFL notices (under 150 KB total)
 assets/          brand assets + manifest.json (all missing for now)
 src/             showcase app (Preact, hash routing)
-public/          _headers, copied as-is to dist/
+public/          _headers and llms.txt, copied as-is to dist/ (llms-full.txt is generated)
 tools/           build-tokens, publish, check
 .github/         CI + Cloudflare Pages deploy
 ```
@@ -86,6 +86,9 @@ npm run check      # tokens in sync, contrast, colour-vision simulation, manifes
 ```
 
 Run `npm run build && npm run check` before handing over.
+
+Keep `public/llms.txt` in step with this file: if a rule, token role or component
+name changes, update it in the same change.
 
 ## Adding a component
 
