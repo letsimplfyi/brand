@@ -10,6 +10,19 @@
     { "id": "splash", "group": "Screens", "name": "PWA splash", "status": "missing", "path": null, "ratio": "9 / 16" },
     { "id": "og-image", "group": "Social", "name": "Social share image (1200 x 630)", "status": "missing", "path": null, "ratio": "1200 / 630" },
     { "id": "empty-states", "group": "Illustration", "name": "Empty-state illustrations", "status": "missing", "path": null, "ratio": "4 / 3" },
-    { "id": "photography", "group": "Illustration", "name": "Photography direction", "status": "missing", "path": null, "ratio": "4 / 3" }
+    { "id": "photography", "group": "Illustration", "name": "Photography direction", "status": "missing", "path": null, "ratio": "4 / 3" },
+    { "id": "chaikadi-logo-primary", "group": "Chaikadi · Logo", "name": "Chaikadi logo, primary", "status": "ready", "path": "chaikadi/logo-primary.svg", "ratio": "16 / 9" },
+    { "id": "chaikadi-logo-mark", "group": "Chaikadi · Logo", "name": "Chaikadi mark (tea glass)", "status": "ready", "path": "chaikadi/logo-mark.svg", "ratio": "1 / 1" },
+    { "id": "chaikadi-logo-mono", "group": "Chaikadi · Logo", "name": "Chaikadi logo, one colour", "status": "ready", "path": "chaikadi/logo-mono.svg", "ratio": "16 / 9" },
+    { "id": "chaikadi-favicon", "group": "Chaikadi · Icons", "name": "Chaikadi favicon (SVG)", "status": "ready", "path": "chaikadi/favicon.svg", "ratio": "1 / 1" },
+    { "id": "chaikadi-app-icon", "group": "Chaikadi · Icons", "name": "Chaikadi app icon (SVG master; 192, 512, maskable, Apple touch as PNG)", "status": "ready", "path": "chaikadi/app-icon.svg", "ratio": "1 / 1" },
+    { "id": "chaikadi-avatar", "group": "Chaikadi · Icons", "name": "Chaikadi avatar (400)", "status": "ready", "path": "chaikadi/avatar-400.png", "ratio": "1 / 1" },
+    { "id": "chaikadi-loading", "group": "Chaikadi · Screens", "name": "Chaikadi loading screen", "status": "ready", "path": "chaikadi/loading.svg", "ratio": "9 / 16" },
+    { "id": "chaikadi-splash", "group": "Chaikadi · Screens", "name": "Chaikadi PWA splash", "status": "ready", "path": "chaikadi/splash.svg", "ratio": "9 / 16" },
+    { "id": "chaikadi-og-image", "group": "Chaikadi · Social", "name": "Chaikadi social share image (1200 x 630)", "status": "ready", "path": "chaikadi/og-image.png", "ratio": "1200 / 630" },
+    { "id": "chaikadi-github-social", "group": "Chaikadi · Social", "name": "Chaikadi GitHub social preview (1280 x 640)", "status": "ready", "path": "chaikadi/github-social.png", "ratio": "2 / 1" },
+    { "id": "chaikadi-empty-menu", "group": "Chaikadi · Empty states", "name": "Empty menu glyph", "status": "ready", "path": "chaikadi/empty-menu.svg", "ratio": "4 / 3" },
+    { "id": "chaikadi-empty-picks", "group": "Chaikadi · Empty states", "name": "No picks glyph", "status": "ready", "path": "chaikadi/empty-picks.svg", "ratio": "4 / 3" },
+    { "id": "chaikadi-empty-history", "group": "Chaikadi · Empty states", "name": "No history glyph", "status": "ready", "path": "chaikadi/empty-history.svg", "ratio": "4 / 3" }
   ]
 }

@@ -105,6 +105,7 @@ export function Credits() {
 
       <h2>Design lineage</h2>
       <p class="prose"><b>letsimpl.fyi</b> and <b>chaikadi.fyi</b>, by Vysakh Premkumar. The wordmark, type scale, receipt, sheets and accessibility rules are inherited from those two design books. Their yellow, blue and green were dropped in v0.3: the brand is black and white.</p>
+      <p class="prose">The Chaikadi identity kit (<code>assets/chaikadi/</code>) was created at the founder's explicit direction on 2026-11-22 with an AI assistant, as a documented exception to the no-agent-brand-material rule. Tagline "Decide, order, split."; descriptor "Free. Free Software. Simple and stupid." Wordmark outlines are Atkinson Hyperlegible Mono (OFL 1.1). Design assets: CC BY-SA 4.0.</p>
       <p><Ext href="https://letsimpl.fyi">letsimpl.fyi</Ext> <Ext href="https://github.com/tellmeY18/chaikadi.fyi">chaikadi.fyi</Ext></p>
 
       <h2>Research and standards</h2>
