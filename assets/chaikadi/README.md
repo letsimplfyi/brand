@@ -11,7 +11,7 @@ Status: **ready** (signed off by the founder, 2026-11-22).
 |---|---|
 | Name | **Chaikadi** (capital C, one word) |
 | Tagline | **Decide, order, split.** |
-| Descriptor | **Free. Free Software. Simple and stupid.** |
+| Descriptor | **Free. Free Software. Simple and Stupid.** |
 | Licence line | AGPL-3.0-or-later |
 | Site | chaikadi.fyi |
 

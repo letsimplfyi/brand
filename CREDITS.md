@@ -10,7 +10,7 @@ only learned from it, we say that too. Nothing below implies endorsement.
   accessibility rules in this repo are inherited from those two design books. Their yellow, blue and green were dropped in v0.3: the brand is black and white.
   https://letsimpl.fyi · https://github.com/tellmeY18/chaikadi.fyi
 - **Chaikadi identity kit** (`assets/chaikadi/`: tea-glass mark, lockups, icons, screens, social images, empty-state glyphs;
-  tagline "Decide, order, split.", descriptor "Free. Free Software. Simple and stupid."). Created at the founder's explicit
+  tagline "Decide, order, split.", descriptor "Free. Free Software. Simple and Stupid."). Created at the founder's explicit
   direction on 2026-11-22 with an AI assistant, as a documented exception to the "agents create zero brand material" rule.
   Wordmark outlines are Atkinson Hyperlegible Mono (SIL OFL 1.1). Design assets: CC BY-SA 4.0.
 
