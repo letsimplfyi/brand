@@ -23,6 +23,19 @@
     { "id": "chaikadi-github-social", "group": "Chaikadi · Social", "name": "Chaikadi GitHub social preview (1280 x 640)", "status": "ready", "path": "chaikadi/github-social.png", "ratio": "2 / 1" },
     { "id": "chaikadi-empty-menu", "group": "Chaikadi · Empty states", "name": "Empty menu glyph", "status": "ready", "path": "chaikadi/empty-menu.svg", "ratio": "4 / 3" },
     { "id": "chaikadi-empty-picks", "group": "Chaikadi · Empty states", "name": "No picks glyph", "status": "ready", "path": "chaikadi/empty-picks.svg", "ratio": "4 / 3" },
-    { "id": "chaikadi-empty-history", "group": "Chaikadi · Empty states", "name": "No history glyph", "status": "ready", "path": "chaikadi/empty-history.svg", "ratio": "4 / 3" }
+    { "id": "chaikadi-empty-history", "group": "Chaikadi · Empty states", "name": "No history glyph", "status": "ready", "path": "chaikadi/empty-history.svg", "ratio": "4 / 3" },
+    { "id": "commoner-logo-primary", "group": "Commoner · Logo", "name": "Commoner logo, primary", "status": "ready", "path": "commoner/logo-primary.svg", "ratio": "16 / 9" },
+    { "id": "commoner-logo-mark", "group": "Commoner · Logo", "name": "Commoner mark (rangefinder camera)", "status": "ready", "path": "commoner/logo-mark.svg", "ratio": "1 / 1" },
+    { "id": "commoner-logo-mono", "group": "Commoner · Logo", "name": "Commoner logo, one colour", "status": "ready", "path": "commoner/logo-mono.svg", "ratio": "16 / 9" },
+    { "id": "commoner-favicon", "group": "Commoner · Icons", "name": "Commoner favicon (SVG)", "status": "ready", "path": "commoner/favicon.svg", "ratio": "1 / 1" },
+    { "id": "commoner-app-icon", "group": "Commoner · Icons", "name": "Commoner app icon (SVG master; 192, 512, maskable, Apple touch as PNG)", "status": "ready", "path": "commoner/app-icon.svg", "ratio": "1 / 1" },
+    { "id": "commoner-avatar", "group": "Commoner · Icons", "name": "Commoner avatar (400)", "status": "ready", "path": "commoner/avatar-400.png", "ratio": "1 / 1" },
+    { "id": "commoner-loading", "group": "Commoner · Screens", "name": "Commoner loading screen", "status": "ready", "path": "commoner/loading.svg", "ratio": "9 / 16" },
+    { "id": "commoner-splash", "group": "Commoner · Screens", "name": "Commoner PWA splash", "status": "ready", "path": "commoner/splash.svg", "ratio": "9 / 16" },
+    { "id": "commoner-og-image", "group": "Commoner · Social", "name": "Commoner social share image (1200 x 630)", "status": "ready", "path": "commoner/og-image.png", "ratio": "1200 / 630" },
+    { "id": "commoner-github-social", "group": "Commoner · Social", "name": "Commoner GitHub social preview (1280 x 640)", "status": "ready", "path": "commoner/github-social.png", "ratio": "2 / 1" },
+    { "id": "commoner-empty-category", "group": "Commoner · Empty states", "name": "Empty category glyph", "status": "ready", "path": "commoner/empty-category.svg", "ratio": "4 / 3" },
+    { "id": "commoner-not-found", "group": "Commoner · Empty states", "name": "Category not found glyph", "status": "ready", "path": "commoner/not-found.svg", "ratio": "4 / 3" },
+    { "id": "commoner-offline", "group": "Commoner · Empty states", "name": "No connection glyph", "status": "ready", "path": "commoner/offline.svg", "ratio": "4 / 3" }
   ]
 }

@@ -59,7 +59,7 @@ if (bytes > 150 * 1024 + 1) bad(`fonts total ${(bytes / 1024).toFixed(0)} KB, bu
 if (fonts.filter((f) => f.endsWith(".OFL.txt")).length < 4) bad("missing an OFL notice in fonts/");
 
 // 5. No third-party requests; CSP present and tight.
-const allowed = /^(letsimpl\.fyi|brand\.letsimpl\.fyi|eatsights\.letsimpl\.fyi|chaikadi\.fyi|github\.com|example\.org|www\.w3\.org|fsf\.org|sronpersonalpages\.nl|jfly\.uni-koeln\.de|brailleinstitute\.org|preactjs\.com|vite\.dev)$/;
+const allowed = /^(letsimpl\.fyi|brand\.letsimpl\.fyi|eatsights\.letsimpl\.fyi|chaikadi\.fyi|commoner\.letsimpl\.fyi|github\.com|example\.org|www\.w3\.org|fsf\.org|sronpersonalpages\.nl|jfly\.uni-koeln\.de|brailleinstitute\.org|preactjs\.com|vite\.dev)$/;
 const files = execFileSync("git", ["ls-files", "--cached", "--others", "--exclude-standard", "src", "components", "css", "index.html"], { cwd: root }).toString().split("\n").filter(Boolean);
 for (const f of files) {
   for (const m of read(f).matchAll(/https?:\/\/([^/:"'\s)<>`]+)/g)) if (!allowed.test(m[1])) bad(`${f}: unapproved external host ${m[1]}`);
