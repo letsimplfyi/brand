@@ -42,20 +42,20 @@ def camera(small=False):
     outlined body and one big lens right of centre. No marks, text or texture. One path filled with the even-odd rule, so
     the cut-outs and rings are clean holes. Corners are square; only the lens is round."""
     if not small:
-        outer = [(4, 22), (8, 22), (8, 18), (15, 18), (15, 22), (17.5, 22), (17.5, 19.2), (27, 19.2), (27, 22), (60, 22), (60, 56), (4, 56)]
-        hole = [(6, 29.5), (58, 29.5), (58, 54), (6, 54)]
-        cut = rect(46.5, 24, 55.5, 27.8) + rect(31, 24, 38.5, 27.8)
-        cx, cy = 37, 41.8
-        return pts(outer) + pts(hole) + cut + ring(cx, cy, 10.5, 8.8) + circle(cx, cy, 6.2)
-    # favicon: chunkier, fewer parts (a 2-unit wall disappears at 16 px)
-    outer = [(3, 24), (10, 24), (10, 19), (22, 19), (22, 24), (61, 24), (61, 56), (3, 56)]
-    hole = [(7.2, 32.5), (56.8, 32.5), (56.8, 51.8), (7.2, 51.8)]
-    cut = rect(46, 26.5, 56, 30)
-    return pts(outer) + pts(hole) + cut + ring(36, 42, 8.4, 5.4) + circle(36, 42, 2.6)
+        outer = [(4, 22), (8, 22), (8, 18.5), (15, 18.5), (15, 22), (17.5, 22), (17.5, 19.7), (27, 19.7), (27, 22), (60, 22), (60, 56), (4, 56)]
+        hole = [(5.5, 28), (58.5, 28), (58.5, 54.5), (5.5, 54.5)]       # 1.5-unit wall, like the chai glass
+        cut = rect(46.5, 23.6, 55.5, 26.4) + rect(31, 23.6, 38.5, 26.4)
+        cx, cy = 37, 41.5
+        return pts(outer) + pts(hole) + cut + ring(cx, cy, 10.5, 9) + circle(cx, cy, 5.4)
+    # favicon: chunkier, fewer parts (a 1.5-unit wall disappears at 16 px)
+    outer = [(3, 24), (10, 24), (10, 19.5), (22, 19.5), (22, 24), (61, 24), (61, 56), (3, 56)]
+    hole = [(6.6, 31.5), (57.4, 31.5), (57.4, 52.4), (6.6, 52.4)]
+    cut = rect(46, 26.2, 56, 29)
+    return pts(outer) + pts(hole) + cut + ring(36, 42, 8.6, 6.2) + circle(36, 42, 2.4)
 
 MARK = camera()
 FAVICON = camera(small=True)
-BBOX = (4, 18, 60, 56)          # visible extent of MARK in grid units: x0, y0, x1, y1
+BBOX = (4, 18.5, 60, 56)          # visible extent of MARK in grid units: x0, y0, x1, y1
 
 # ---- text outlines -----------------------------------------------------------------
 _fonts = {}

@@ -26,13 +26,14 @@ flash, an outlined body, and one big lens right of centre. Nothing else: no stra
 It stands for taking a picture, and for the commons being a place anyone's pictures can go. Black on white by default;
 white on black as the inverse. Same family as the chai glass: an outlined body with solid details, no strokes beyond that.
 
-Geometry (64-unit grid): body x 4..60, y 22..56. Solid top plate y 22..29.5 across the full width; the rest of the body is a
-2-unit outline. Dials rise from the plate: x 8..15 to y 18, and x 17.5..27 to y 19.2. Cut-outs in the plate: viewfinder
-x 46.5..55.5 and flash x 31..38.5, both y 24..27.8. Lens centred at (37, 41.8): ring 10.5 / 8.8 around a solid disc of
-radius 6.2. Body corners are square, as the brand requires; only the lens is round. The mark is one path filled with the
-even-odd rule, so the cut-outs and the ring are clean holes and nothing drifts with scale.
+Geometry (64-unit grid): body x 4..60, y 22..56. Solid top plate y 22..28 across the full width; the rest of the body is a
+1.5-unit outline, the same weight as the band on the chai glass. Dials rise from the plate: x 8..15 to y 18.5, and
+x 17.5..27 to y 19.7. Cut-outs in the plate: viewfinder x 46.5..55.5 and flash x 31..38.5, both y 23.6..26.4. Lens centred
+at (37, 41.5): ring 10.5 / 9 around a solid disc of radius 5.4. Body corners are square, as the brand requires; only the lens
+is round. The mark is one path filled with the even-odd rule, so the cut-outs and the ring are clean holes and nothing
+drifts with scale.
 
-Small sizes: `favicon.svg` is a chunkier version (wall 4.2, one dial, a smaller ring and disc), because 2 units disappear at
+Small sizes: `favicon.svg` is a chunkier version (wall 3.6, one dial, a smaller ring and disc), because 1.5 units disappear at
 16 px. Use the favicon geometry for anything under 32 px.
 
 The wordmark is "Commoner" in Atkinson Hyperlegible Mono Bold (SIL OFL 1.1), converted to outlines so no file needs the
