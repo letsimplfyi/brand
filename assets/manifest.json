@@ -36,6 +36,19 @@
     { "id": "commoner-github-social", "group": "Commoner · Social", "name": "Commoner GitHub social preview (1280 x 640)", "status": "ready", "path": "commoner/github-social.png", "ratio": "2 / 1" },
     { "id": "commoner-empty-category", "group": "Commoner · Empty states", "name": "Empty category glyph", "status": "ready", "path": "commoner/empty-category.svg", "ratio": "4 / 3" },
     { "id": "commoner-not-found", "group": "Commoner · Empty states", "name": "Category not found glyph", "status": "ready", "path": "commoner/not-found.svg", "ratio": "4 / 3" },
-    { "id": "commoner-offline", "group": "Commoner · Empty states", "name": "No connection glyph", "status": "ready", "path": "commoner/offline.svg", "ratio": "4 / 3" }
+    { "id": "commoner-offline", "group": "Commoner · Empty states", "name": "No connection glyph", "status": "ready", "path": "commoner/offline.svg", "ratio": "4 / 3" },
+    { "id": "readrfc-logo-primary", "group": "readrfc · Logo", "name": "readrfc logo, primary", "status": "ready", "path": "readrfc/logo-primary.svg", "ratio": "16 / 9" },
+    { "id": "readrfc-logo-mark", "group": "readrfc · Logo", "name": "readrfc mark (R in a box, with a dot)", "status": "ready", "path": "readrfc/logo-mark.svg", "ratio": "1 / 1" },
+    { "id": "readrfc-logo-mono", "group": "readrfc · Logo", "name": "readrfc logo, one colour", "status": "ready", "path": "readrfc/logo-mono.svg", "ratio": "16 / 9" },
+    { "id": "readrfc-favicon", "group": "readrfc · Icons", "name": "readrfc favicon (SVG)", "status": "ready", "path": "readrfc/favicon.svg", "ratio": "1 / 1" },
+    { "id": "readrfc-app-icon", "group": "readrfc · Icons", "name": "readrfc app icon (SVG master; 192, 512, maskable, Apple touch as PNG)", "status": "ready", "path": "readrfc/app-icon.svg", "ratio": "1 / 1" },
+    { "id": "readrfc-avatar", "group": "readrfc · Icons", "name": "readrfc avatar (400)", "status": "ready", "path": "readrfc/avatar-400.png", "ratio": "1 / 1" },
+    { "id": "readrfc-loading", "group": "readrfc · Screens", "name": "readrfc loading screen", "status": "ready", "path": "readrfc/loading.svg", "ratio": "9 / 16" },
+    { "id": "readrfc-splash", "group": "readrfc · Screens", "name": "readrfc PWA splash", "status": "ready", "path": "readrfc/splash.svg", "ratio": "9 / 16" },
+    { "id": "readrfc-og-image", "group": "readrfc · Social", "name": "readrfc social share image (1200 x 630)", "status": "ready", "path": "readrfc/og-image.png", "ratio": "1200 / 630" },
+    { "id": "readrfc-github-social", "group": "readrfc · Social", "name": "readrfc GitHub social preview (1280 x 640)", "status": "ready", "path": "readrfc/github-social.png", "ratio": "2 / 1" },
+    { "id": "readrfc-empty-results", "group": "readrfc · Empty states", "name": "No results glyph", "status": "ready", "path": "readrfc/empty-results.svg", "ratio": "4 / 3" },
+    { "id": "readrfc-not-found", "group": "readrfc · Empty states", "name": "RFC not found glyph", "status": "ready", "path": "readrfc/not-found.svg", "ratio": "4 / 3" },
+    { "id": "readrfc-offline", "group": "readrfc · Empty states", "name": "No connection glyph", "status": "ready", "path": "readrfc/offline.svg", "ratio": "4 / 3" }
   ]
 }
