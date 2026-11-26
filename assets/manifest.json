@@ -49,6 +49,16 @@
     { "id": "readrfc-github-social", "group": "readrfc · Social", "name": "readrfc GitHub social preview (1280 x 640)", "status": "ready", "path": "readrfc/github-social.png", "ratio": "2 / 1" },
     { "id": "readrfc-empty-results", "group": "readrfc · Empty states", "name": "No results glyph", "status": "ready", "path": "readrfc/empty-results.svg", "ratio": "4 / 3" },
     { "id": "readrfc-not-found", "group": "readrfc · Empty states", "name": "RFC not found glyph", "status": "ready", "path": "readrfc/not-found.svg", "ratio": "4 / 3" },
-    { "id": "readrfc-offline", "group": "readrfc · Empty states", "name": "No connection glyph", "status": "ready", "path": "readrfc/offline.svg", "ratio": "4 / 3" }
+    { "id": "readrfc-offline", "group": "readrfc · Empty states", "name": "No connection glyph", "status": "ready", "path": "readrfc/offline.svg", "ratio": "4 / 3" },
+    { "id": "quarchive-logo-primary", "group": "quarchive · Logo", "name": "quarchive logo, primary", "status": "ready", "path": "quarchive/logo-primary.svg", "ratio": "16 / 9" },
+    { "id": "quarchive-logo-mark", "group": "quarchive · Logo", "name": "quarchive mark (duck in a graduation cap)", "status": "ready", "path": "quarchive/logo-mark.svg", "ratio": "1 / 1" },
+    { "id": "quarchive-logo-mono", "group": "quarchive · Logo", "name": "quarchive logo, one colour", "status": "ready", "path": "quarchive/logo-mono.svg", "ratio": "16 / 9" },
+    { "id": "quarchive-favicon", "group": "quarchive · Icons", "name": "quarchive favicon (SVG)", "status": "ready", "path": "quarchive/favicon.svg", "ratio": "1 / 1" },
+    { "id": "quarchive-app-icon", "group": "quarchive · Icons", "name": "quarchive app icon (SVG master; 192, 512, maskable, Apple touch as PNG)", "status": "ready", "path": "quarchive/app-icon.svg", "ratio": "1 / 1" },
+    { "id": "quarchive-avatar", "group": "quarchive · Icons", "name": "quarchive avatar (400)", "status": "ready", "path": "quarchive/avatar-400.png", "ratio": "1 / 1" },
+    { "id": "quarchive-loading", "group": "quarchive · Screens", "name": "quarchive loading screen", "status": "ready", "path": "quarchive/loading.svg", "ratio": "9 / 16" },
+    { "id": "quarchive-splash", "group": "quarchive · Screens", "name": "quarchive PWA splash", "status": "ready", "path": "quarchive/splash.svg", "ratio": "9 / 16" },
+    { "id": "quarchive-og-image", "group": "quarchive · Social", "name": "quarchive social share image (1200 x 630)", "status": "ready", "path": "quarchive/og-image.png", "ratio": "1200 / 630" },
+    { "id": "quarchive-github-social", "group": "quarchive · Social", "name": "quarchive GitHub social preview (1280 x 640)", "status": "ready", "path": "quarchive/github-social.png", "ratio": "2 / 1" }
   ]
 }
